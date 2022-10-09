@@ -1,6 +1,6 @@
 {
     "name": "@riadh-adrani/utility-js",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "contains utility functions",
     "main": "./index.js",
     "author": "riadh-adrani",
@@ -13,5 +13,11 @@
         "javascript",
         "typescript",
         "library"
-    ]
+    ],
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "jest": "^28.1.3"
+    }
 }

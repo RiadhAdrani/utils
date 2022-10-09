@@ -1,5 +1,4 @@
-import areEqual from "./src/areEqual";
-import areShallowEqual from "./src/areEqualShallow";
-import copy from "./src/copy";
+const copy = require("./src/copy");
+const areEqual = require("./src/areEqual");
 
-export { areEqual, areShallowEqual, copy };
+module.exports = { areEqual, copy };

@@ -3,7 +3,7 @@
  * @param {any} source Source object.
  * @returns {any} New instance.
  */
-export default function copy(source) {
+function copy(source) {
     let output = undefined;
 
     if (
@@ -25,3 +25,5 @@ export default function copy(source) {
 
     return output;
 }
+
+module.exports = copy;

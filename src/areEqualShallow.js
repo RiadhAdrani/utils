@@ -4,7 +4,7 @@
  * @param {any} obj2 second object
  * @returns {boolean | undefined}
  */
-export default function areShallowEqual(obj1, obj2) {
+function areShallowEqual(obj1, obj2) {
     /**
      * compare the two object with the predefined Object.is
      */
@@ -16,3 +16,5 @@ export default function areShallowEqual(obj1, obj2) {
     if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null)
         return false;
 }
+
+module.exports = areShallowEqual;

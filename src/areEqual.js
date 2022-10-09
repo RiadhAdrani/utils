@@ -1,4 +1,4 @@
-import areShallowEqual from "./areEqualShallow";
+const areShallowEqual = require("./areEqualShallow");
 
 /**
  * perform deep comparison of two objects of any type.
@@ -7,7 +7,7 @@ import areShallowEqual from "./areEqualShallow";
  * @param {number} depth maximum comparison depth, `25` by default. This value improve performance with large object and circular dependencies
  * @returns
  */
-export default function areEqual(obj1, obj2, depth = 10) {
+function areEqual(obj1, obj2, depth = 10) {
     const shallowComparison = areShallowEqual(obj1, obj2);
 
     if (typeof shallowComparison === "boolean") return shallowComparison;
@@ -44,3 +44,5 @@ export default function areEqual(obj1, obj2, depth = 10) {
 
     return true;
 }
+
+module.exports = areEqual;
