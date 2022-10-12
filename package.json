@@ -1,11 +1,10 @@
 {
     "name": "@riadh-adrani/utility-js",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "contains utility functions",
     "main": "./index.js",
     "author": "riadh-adrani",
     "license": "MIT",
-    "types": "index.d.ts",
     "keywords": [
         "riadh",
         "adrani",
