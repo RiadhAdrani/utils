@@ -1,6 +1,6 @@
 {
     "name": "@riadh-adrani/utility-js",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "contains utility functions",
     "main": "./index.js",
     "author": "riadh-adrani",
