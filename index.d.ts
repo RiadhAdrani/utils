@@ -7,3 +7,4 @@ export { default as isEmpty } from "./src/isEmpty";
 export { default as isFalsy } from "./src/isFalsy";
 export { default as range } from "./src/range";
 export { default as wrap } from "./src/wrap";
+export { default as hasProperty } from "./src/hasProperty";
