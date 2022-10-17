@@ -1,4 +1,4 @@
-const isEmpty = require("./isEmpty");
+const isEmpty = require(".");
 
 test.each([
     [null, true],

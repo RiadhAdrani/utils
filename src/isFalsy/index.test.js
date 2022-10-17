@@ -1,4 +1,4 @@
-const isFalsy = require("./isFalsy");
+const isFalsy = require(".");
 
 test.each([
     [null, [], true],

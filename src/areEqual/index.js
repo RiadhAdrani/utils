@@ -4,7 +4,7 @@ const areShallowEqual = require("./areEqualShallow");
  * perform deep comparison of two objects of any type.
  * @param {any} obj1 first object.
  * @param {any} obj2 second object.
- * @param {number} depth maximum comparison depth, `25` by default. This value improve performance with large object and circular dependencies
+ * @param {number} depth maximum comparison depth, `10` by default. This value improve performance with large object and circular dependencies
  * @returns
  */
 function areEqual(obj1, obj2, depth = 10) {

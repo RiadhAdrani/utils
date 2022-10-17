@@ -1,4 +1,4 @@
-const areEqual = require("./areEqual");
+const areEqual = require(".");
 
 const fn = () => {};
 

@@ -1,4 +1,4 @@
-const capitalize = require("./capitalize");
+const capitalize = require(".");
 
 test.each([
     [null, null],

@@ -1,4 +1,4 @@
-const isEmpty = require("./isEmpty");
+const isEmpty = require("../isEmpty");
 
 /**
  * return if a string is blank or not.

@@ -1,4 +1,4 @@
-const forRange = require("./forRange");
+const forRange = require(".");
 
 test.each([
     [() => {}, 5, 0, null, undefined],

@@ -1,4 +1,4 @@
-const wrap = require("./wrap");
+const wrap = require(".");
 
 test.each([
     [null, "", "", "null"],
