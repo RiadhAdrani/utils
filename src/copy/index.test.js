@@ -20,3 +20,13 @@ test("should not modify old reference", () => {
     expect(replica).toStrictEqual({ key: "key", uid: "sd-fsd6-f54" });
     expect(obj).toStrictEqual({ key: "123456789", uid: "sd-fsd6-f54" });
 });
+
+test("should not modify nested reference", () => {
+    const obj = { key: "123456789", content: { index: 1 } };
+    const replica = copy(obj);
+
+    replica.content.index = "string";
+
+    expect(replica).toStrictEqual({ key: "123456789", content: { index: "string" } });
+    expect(obj).toStrictEqual({ key: "123456789", content: { index: 1 } });
+});

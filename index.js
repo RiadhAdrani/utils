@@ -7,6 +7,7 @@ const isBlank = require("./src/isBlank");
 const isEmpty = require("./src/isEmpty");
 const wrap = require("./src/wrap");
 const hasProperty = require("./src/hasProperty");
+const isPrimitiveType = require("./src/isPrimitiveType");
 
 module.exports = {
     areEqual,
@@ -18,4 +19,5 @@ module.exports = {
     wrap,
     capitalize,
     hasProperty,
+    isPrimitiveType,
 };

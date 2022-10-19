@@ -1,29 +1,20 @@
+const { isFalsy, isPrimitiveType } = require("../../");
+
 /**
  * Create a new instance from the given object.
  * @param {any} source Source object.
  * @returns {any} New instance.
  */
 function copy(source) {
-    let output = undefined;
+    if (isFalsy(source) || isPrimitiveType(source)) return source;
 
-    if (
-        ["bigint", "boolean", "function", "number", "string", "symbol", "undefined"].includes(
-            typeof source
-        ) ||
-        source === null
-    ) {
-        output = source;
-    } else if (Array.isArray(source)) {
-        output = [];
-        Object.assign(output, source);
-    } else if (typeof source == "object") {
-        output = {};
-        Object.assign(output, source);
-    } else {
-        output = source;
-    }
+    const target = Array.isArray(source) ? [] : {};
 
-    return output;
+    Object.keys(source).forEach((key) => {
+        target[key] = copy(source[key]);
+    });
+
+    return target;
 }
 
 module.exports = copy;
