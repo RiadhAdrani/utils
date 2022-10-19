@@ -1,4 +1,5 @@
-const { isFalsy, isPrimitiveType } = require("../../");
+const isFalsy = require("../isFalsy");
+const isPrimitiveType = require("../isPrimitiveType");
 
 /**
  * Create a new instance from the given object.
