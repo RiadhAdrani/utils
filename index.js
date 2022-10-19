@@ -8,6 +8,7 @@ const isEmpty = require("./src/isEmpty");
 const wrap = require("./src/wrap");
 const hasProperty = require("./src/hasProperty");
 const isPrimitiveType = require("./src/isPrimitiveType");
+const isHexColor = require("./src/isHexColor");
 
 module.exports = {
     areEqual,
@@ -20,4 +21,5 @@ module.exports = {
     capitalize,
     hasProperty,
     isPrimitiveType,
+    isHexColor,
 };
