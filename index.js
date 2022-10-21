@@ -9,6 +9,7 @@ const wrap = require("./src/wrap");
 const hasProperty = require("./src/hasProperty");
 const isPrimitiveType = require("./src/isPrimitiveType");
 const isHexColor = require("./src/isHexColor");
+const isFunction = require("./src/isFunction");
 
 module.exports = {
     areEqual,
@@ -22,4 +23,5 @@ module.exports = {
     hasProperty,
     isPrimitiveType,
     isHexColor,
+    isFunction,
 };

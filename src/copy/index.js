@@ -1,4 +1,5 @@
 const isFalsy = require("../isFalsy");
+const isFunction = require("../isFunction");
 const isPrimitiveType = require("../isPrimitiveType");
 
 /**
@@ -7,7 +8,7 @@ const isPrimitiveType = require("../isPrimitiveType");
  * @returns {any} New instance.
  */
 function copy(source) {
-    if (isFalsy(source) || isPrimitiveType(source)) return source;
+    if (isFalsy(source) || isPrimitiveType(source) || isFunction(source)) return source;
 
     const target = Array.isArray(source) ? [] : {};
 

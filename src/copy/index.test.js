@@ -30,3 +30,11 @@ test("should not modify nested reference", () => {
     expect(replica).toStrictEqual({ key: "123456789", content: { index: "string" } });
     expect(obj).toStrictEqual({ key: "123456789", content: { index: 1 } });
 });
+
+test("should copy functions", () => {
+    const obj = { run: () => "done" };
+
+    const obj2 = copy(obj);
+
+    expect(obj2.run()).toBe(obj.run());
+});
