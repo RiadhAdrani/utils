@@ -10,6 +10,7 @@ const hasProperty = require("./src/hasProperty");
 const isPrimitiveType = require("./src/isPrimitiveType");
 const isHexColor = require("./src/isHexColor");
 const isFunction = require("./src/isFunction");
+const merge = require("./src/merge");
 
 module.exports = {
     areEqual,
@@ -24,4 +25,5 @@ module.exports = {
     isPrimitiveType,
     isHexColor,
     isFunction,
+    merge,
 };

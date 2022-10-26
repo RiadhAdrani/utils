@@ -11,3 +11,4 @@ export { default as hasProperty } from "./src/hasProperty";
 export { default as isPrimitiveType } from "./src/isPrimitiveType";
 export { default as isHexColor } from "./src/isHexColor";
 export { default as isFunction } from "./src/isFunction";
+export { default as merge } from "./src/merge";
