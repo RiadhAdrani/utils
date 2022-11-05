@@ -13,6 +13,7 @@ const isFunction = require("./src/isFunction");
 const merge = require("./src/merge");
 const isRgbColor = require("./src/isRgbColor");
 const since = require("./src/since");
+const isHslColor = require("./src/isHslColor");
 
 module.exports = {
     areEqual,
@@ -29,5 +30,6 @@ module.exports = {
     isFunction,
     merge,
     isRgbColor,
+    isHslColor,
     ...since,
 };
