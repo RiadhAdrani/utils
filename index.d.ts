@@ -27,3 +27,4 @@ export { default as isHexColor } from "./src/isHexColor";
 export { default as isFunction } from "./src/isFunction";
 export { default as isRgbColor } from "./src/isRgbColor";
 export { default as isHslColor } from "./src/isHslColor";
+export * from "./src/getColorType";
