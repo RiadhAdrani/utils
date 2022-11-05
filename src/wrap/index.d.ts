@@ -4,4 +4,4 @@
  * @param wrapper start wrapper.
  * @param wrapperEnd end wrapper. if no value is provided, the value of the wrapper will be used instead
  */
-export default function wrap(value: string, wrapper: string, wrapperEnd: string): string;
+export default function wrap(value: string, wrapper: string, wrapperEnd?: string): string;

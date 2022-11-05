@@ -16,6 +16,9 @@ export { default as merge } from "./src/merge";
 export { default as forRange } from "./src/forRange";
 export { default as range } from "./src/range";
 
+// Number
+export { default as isInInterval } from "./src/isInInterval";
+
 // Time
 export * from "./src/since";
 

@@ -1,0 +1,7 @@
+/**
+ * Check if the given value is within the [`min`,`max`] interval.
+ * @param min minimum value (included)
+ * @param value tested value
+ * @param max maximum value (included)
+ */
+export default function isInInterval(min: number, value: number, max: number): boolean;

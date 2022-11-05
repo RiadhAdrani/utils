@@ -14,6 +14,7 @@ const merge = require("./src/merge");
 const isRgbColor = require("./src/isRgbColor");
 const since = require("./src/since");
 const isHslColor = require("./src/isHslColor");
+const isInInterval = require("./src/isInInterval");
 
 module.exports = {
     areEqual,
@@ -31,5 +32,6 @@ module.exports = {
     merge,
     isRgbColor,
     isHslColor,
+    isInInterval,
     ...since,
 };
