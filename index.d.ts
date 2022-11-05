@@ -13,3 +13,4 @@ export { default as isHexColor } from "./src/isHexColor";
 export { default as isFunction } from "./src/isFunction";
 export { default as merge } from "./src/merge";
 export { default as isRgbColor } from "./src/isRgbColor";
+export * from "./src/since";

@@ -12,6 +12,7 @@ const isHexColor = require("./src/isHexColor");
 const isFunction = require("./src/isFunction");
 const merge = require("./src/merge");
 const isRgbColor = require("./src/isRgbColor");
+const since = require("./src/since");
 
 module.exports = {
     areEqual,
@@ -28,4 +29,5 @@ module.exports = {
     isFunction,
     merge,
     isRgbColor,
+    ...since,
 };
