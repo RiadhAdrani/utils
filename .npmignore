@@ -1,0 +1,5 @@
+.github
+.vscode
+package-lock.json
+README.md
+src/**/*.test.js
