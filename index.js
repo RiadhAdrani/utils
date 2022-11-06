@@ -16,6 +16,7 @@ const since = require("./src/since");
 const isHslColor = require("./src/isHslColor");
 const isInInterval = require("./src/isInInterval");
 const getColorType = require("./src/getColorType");
+const verify = require("./src/verify");
 
 module.exports = {
     areEqual,
@@ -34,6 +35,7 @@ module.exports = {
     isRgbColor,
     isHslColor,
     isInInterval,
+    verify,
     ...since,
     ...getColorType,
 };

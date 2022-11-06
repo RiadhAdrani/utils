@@ -11,6 +11,7 @@ export { default as copy } from "./src/copy";
 export { default as hasProperty } from "./src/hasProperty";
 export { default as isPrimitiveType } from "./src/isPrimitiveType";
 export { default as merge } from "./src/merge";
+export { default as verify } from "./src/verify";
 
 // Array and iteration
 export { default as forRange } from "./src/forRange";
