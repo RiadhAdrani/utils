@@ -41,12 +41,7 @@ const isHslColor = (color) => {
     return false;
   }
 
-  const hslRegEx =
-    /^hsl\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%\)$/;
-  const hslaRegEx =
-    /^hsla\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%( \/ (\d{1,3})(\.\d+){0,1}){0,1}\)$/;
-
-  if (hslRegEx.test(color)) {
+  if (isHslForm(color)) {
     const [h, s, l] = extractDataFromHSL(color);
 
     if (360 < h || h < 0) return false;
@@ -54,7 +49,7 @@ const isHslColor = (color) => {
     if (100 < l || l < 0) return false;
 
     return true;
-  } else if (hslaRegEx.test(color)) {
+  } else if (isHslaForm(color)) {
     const [h, s, l, a] = extractDataFromHSL(color);
 
     if (360 < h || h < 0) return false;
