@@ -12,6 +12,7 @@ export { default as hasProperty } from "./src/hasProperty";
 export { default as isPrimitiveType } from "./src/isPrimitiveType";
 export { default as merge } from "./src/merge";
 export { default as verify } from "./src/verify";
+export { default as isFunction } from "./src/isFunction";
 
 // Array and iteration
 export { default as forRange } from "./src/forRange";
@@ -25,7 +26,8 @@ export * from "./src/since";
 
 // Colors
 export { default as isHexColor } from "./src/isHexColor";
-export { default as isFunction } from "./src/isFunction";
-export { default as isRgbColor } from "./src/isRgbColor";
-export { default as isHslColor } from "./src/isHslColor";
+export * from "./src/isRgbColor";
+export * from "./src/isHslColor";
 export * from "./src/getColorType";
+export * from "./src/convertColor";
+export * from "./src/generateColor";

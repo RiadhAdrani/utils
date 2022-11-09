@@ -1,24 +1,24 @@
 {
-    "name": "@riadh-adrani/utility-js",
-    "version": "0.20.1",
-    "description": "contains utility functions",
-    "types": "./index.d.ts",
-    "main": "./index.js",
-    "author": "riadh-adrani",
-    "license": "MIT",
-    "keywords": [
-        "riadh",
-        "adrani",
-        "utility",
-        "javascript",
-        "typescript",
-        "library"
-    ],
-    "scripts": {
-        "test": "jest",
-        "test-watch": "jest --watch"
-    },
-    "devDependencies": {
-        "jest": "^28.1.3"
-    }
+  "name": "@riadh-adrani/utility-js",
+  "version": "0.22.0",
+  "description": "contains utility functions",
+  "types": "./index.d.ts",
+  "main": "./index.js",
+  "author": "riadh-adrani",
+  "license": "MIT",
+  "keywords": [
+    "riadh",
+    "adrani",
+    "utility",
+    "javascript",
+    "typescript",
+    "library"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }
