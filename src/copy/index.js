@@ -8,15 +8,15 @@ const isPrimitiveType = require("../isPrimitiveType");
  * @returns {any} New instance.
  */
 function copy(source) {
-    if (isFalsy(source) || isPrimitiveType(source) || isFunction(source)) return source;
+  if (isFalsy(source) || isPrimitiveType(source) || isFunction(source)) return source;
 
-    const target = Array.isArray(source) ? [] : {};
+  const target = Array.isArray(source) ? [] : {};
 
-    Object.keys(source).forEach((key) => {
-        target[key] = copy(source[key]);
-    });
+  Object.keys(source).forEach((key) => {
+    target[key] = copy(source[key]);
+  });
 
-    return target;
+  return target;
 }
 
 module.exports = copy;
