@@ -1,6 +1,8 @@
-const isBlank = require(".");
+import { it, expect, describe } from "@jest/globals";
+import isBlank from ".";
 
-test.each([
+describe("isBlank", () => {
+  it.each([
     [null, true],
     [undefined, true],
     [1, true],
@@ -13,6 +15,7 @@ test.each([
     [" string ", false],
     ["string", false],
     [" str in g ", false],
-])("should copy test", (input, expected) => {
-    expect(isBlank(input)).toStrictEqual(expected);
+  ])("should copy test", (input, expected) => {
+    expect(isBlank(input as string)).toStrictEqual(expected);
+  });
 });
