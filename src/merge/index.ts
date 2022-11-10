@@ -1,9 +1,10 @@
 import hasProperty from "../hasProperty";
 
 /**
- * @param  objects
+ * deeply merge two or more objects.
+ * @param objects to merge.
  */
-export default function merge(...objects: Array<Record<string, unknown>>) {
+export default function merge<T>(...objects: Array<Record<string, unknown>>): T {
   if (objects.some((o) => typeof o !== "object")) {
     throw new Error("Some/All arguments are not of type (object).");
   }
@@ -30,5 +31,5 @@ export default function merge(...objects: Array<Record<string, unknown>>) {
     });
 
     return output;
-  }, {});
+  }, {}) as T;
 }
