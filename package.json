@@ -4,6 +4,9 @@
   "description": "contains utility functions",
   "types": "build/index.d.ts",
   "main": "build/index.js",
+  "files": [
+    "build/**/*"
+  ],
   "author": "riadh-adrani",
   "license": "MIT",
   "keywords": [
