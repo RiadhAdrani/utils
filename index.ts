@@ -31,3 +31,6 @@ export * from "./src/isHslColor";
 export * from "./src/getColorType";
 export * from "./src/convertColor";
 export * from "./src/generateColor";
+
+// Types
+export * from "./types";

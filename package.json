@@ -2,8 +2,8 @@
   "name": "@riadh-adrani/utility-js",
   "version": "0.22.2",
   "description": "contains utility functions",
-  "types": "./index.d.ts",
-  "main": "./index.js",
+  "types": "build/index.d.ts",
+  "main": "build/index.js",
   "author": "riadh-adrani",
   "license": "MIT",
   "keywords": [
