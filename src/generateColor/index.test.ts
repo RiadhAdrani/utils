@@ -1,4 +1,6 @@
-const { generateContrastSafeColor } = require(".");
+import { it, expect, describe } from "@jest/globals";
+
+import { generateContrastSafeColor } from ".";
 
 describe("generateColor", () => {
   it.each([
