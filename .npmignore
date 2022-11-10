@@ -3,3 +3,8 @@
 package-lock.json
 README.md
 src/**/*.test.js
+.eslintignore
+.eslintrc
+.gitignore
+.jest.config.js
+tsconfig.json
