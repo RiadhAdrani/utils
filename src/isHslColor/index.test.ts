@@ -1,8 +1,9 @@
-const { isHslColor, isHslForm, isHslaForm, extractDataFromHSL } = require(".");
+import { it, expect, describe } from "@jest/globals";
+import { isHslColor, isHslForm, isHslaForm, extractDataFromHSL } from ".";
 
 describe("isHSLColor", () => {
   it.each([[1], [[]], [{}], [null], [undefined]])("should refuse non string values", (value) => {
-    expect(isHslColor(value)).toBe(false);
+    expect(isHslColor(value as string)).toBe(false);
   });
 
   it.each([
@@ -29,10 +30,10 @@ describe("isHSLColor", () => {
     ["hsl(3000deg 100% 100%)", false],
     ["hsl(300deg 1000% 100%)", false],
     ["hsl(300deg 100% 1000%)", false],
-    ["hsl(10deg 5% 10%)", true],
-    ["hsl(10.5deg 5.5% 10.5%)", true],
+    ["hsla(10deg 5% 10% / 1)", true],
+    ["hsla(10.5deg 5.5% 10.5% / 0.5)", true],
   ])("should extract data from hsl/hsla : %s", (color, expected) => {
-    expect(isHslForm(color)).toBe(expected);
+    expect(isHslaForm(color)).toBe(expected);
   });
 
   it.each([

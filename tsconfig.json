@@ -1,5 +1,5 @@
 {
-  "exclude": ["node_modules", "src/**/*.test.ts", "jest.config.js"],
+  "exclude": ["node_modules", "src/**/*.test.ts", "./jest.config.js"],
   "compilerOptions": {
     "target": "es2016",
     "lib": ["es6", "dom"],

@@ -1,17 +1,43 @@
-const isBlank = require("../isBlank");
+import isBlank from "../isBlank";
 
-const HSL_REGEX = /^hsl\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%\)$/;
-const HSLA_REGEX =
+export const HSL_REGEX =
+  /^hsl\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%\)$/;
+
+export const HSLA_REGEX =
   /^hsla\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%( \/ (\d{1,3})(\.\d+){0,1}){0,1}\)$/;
-const isHslForm = (color) => {
+
+/**
+ * check if the given color is of an hsl form
+ *
+ * `hsl(99deg 99% 99%)`
+ *
+ * note that hue, saturation, lightness values are not checked.
+ * @param color target
+ */
+export const isHslForm = (color: string): boolean => {
   return isBlank(color) ? false : HSL_REGEX.test(color);
 };
 
-const isHslaForm = (color) => {
+/**
+ * check if the given color is of an hsla form
+ *
+ * `hsla(99deg 99% 99% / 0.99)`
+ *
+ * note that hue, saturation, lightness and alpha values are not checked.
+ * @param color target
+ */
+export const isHslaForm = (color: string): boolean => {
   return isBlank(color) ? false : HSLA_REGEX.test(color);
 };
 
-const extractDataFromHSL = (color) => {
+/**
+ * extract color data from an hsl/a color form.
+ *
+ * if the color has an invalid type, an error will be thrown.
+ *
+ * @param color source
+ */
+export const extractDataFromHSL = (color: string): number[] => {
   if (isHslaForm(color)) {
     return color
       .slice(5, -1)
@@ -36,7 +62,13 @@ const extractDataFromHSL = (color) => {
   throw "(color) is not of a HSL/HSLA form.";
 };
 
-const isHslColor = (color) => {
+/**
+ * Check if the given color is in an HSL or HSLA format:
+ * - `hsl(h,s,l)`
+ * - `hsla(h,s,l,a)`
+ * @param color target
+ */
+export const isHslColor = (color: string): boolean => {
   if (isBlank(color)) {
     return false;
   }
@@ -64,13 +96,4 @@ const isHslColor = (color) => {
   }
 
   return false;
-};
-
-module.exports = {
-  HSLA_REGEX,
-  HSL_REGEX,
-  isHslForm,
-  isHslaForm,
-  extractDataFromHSL,
-  isHslColor,
 };
