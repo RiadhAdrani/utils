@@ -1,11 +1,10 @@
-const isBlank = require("../isBlank");
+import isBlank from "../isBlank";
 
 /**
- *
- * @param {string} color
- * @returns
+ * Determine if the given string is a hex color.
+ * @param color value
  */
-function isHexColor(color) {
+export default function isHexColor(color: string): boolean {
   if (isBlank(color)) return false;
 
   const three = /^#[0-9|a|A|b|B|c|C|d|D|e|E|f|F]{3}$/;
@@ -14,5 +13,3 @@ function isHexColor(color) {
 
   return three.test(color) || six.test(color) || eight.test(color);
 }
-
-module.exports = isHexColor;
