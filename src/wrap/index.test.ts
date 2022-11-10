@@ -1,6 +1,8 @@
-const wrap = require(".");
+import wrap from ".";
+import { it, expect, describe } from "@jest/globals";
 
-test.each([
+describe("wrap", () => {
+  it.each([
     [null, "", "", "null"],
     [undefined, "", "", "undefined"],
     [{}, "", "", "[object Object]"],
@@ -12,6 +14,7 @@ test.each([
     ["string", " ", ",", " string,"],
     ["string", "'", "'", "'string'"],
     ["string", '"', '"', '"string"'],
-])("should copy test", (input, fw, lw, expected) => {
-    expect(wrap(input, fw, lw)).toStrictEqual(expected);
+  ])("should copy test", (input, fw, lw, expected) => {
+    expect(wrap(input as string, fw, lw)).toStrictEqual(expected);
+  });
 });
