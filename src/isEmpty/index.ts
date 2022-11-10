@@ -4,4 +4,6 @@
  * an empty string is the one having no characters.
  * @param value
  */
-export default function isEmpty(value: string): boolean;
+export default function isEmpty(value: string): boolean {
+  return typeof value !== "string" || value.length === 0;
+}
