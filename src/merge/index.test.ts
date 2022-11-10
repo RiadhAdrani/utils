@@ -1,6 +1,8 @@
-const merge = require(".");
+import { it, expect, describe } from "@jest/globals";
+import merge from ".";
 
-test.each([
+describe("merge", () => {
+  it.each([
     [[undefined]],
     [[null]],
     [[1]],
@@ -9,11 +11,11 @@ test.each([
     [[{}, null]],
     [[{}, {}, "string"]],
     [[{}, {}, 1, {}]],
-])("should throw an error when an argument is not an object", (objects) => {
-    expect(() => merge(...objects)).toThrow();
-});
+  ])("should throw an error when an argument is not an object", (objects) => {
+    expect(() => merge(...(objects as Record<string, unknown>[]))).toThrow();
+  });
 
-test.each([
+  it.each([
     [[{}], {}],
     [[{}, {}], {}],
     [[{}, { color: "red" }], { color: "red" }],
@@ -30,13 +32,14 @@ test.each([
     [[{ data: {} }, { data: { age: 2 } }], { data: { age: 2 } }],
     [[{ data: { age: 1 } }, { data: {} }], { data: { age: 1 } }],
     [
-        [{ data: { age: 1, others: undefined } }, { data: { others: {} } }],
-        { data: { age: 1, others: {} } },
+      [{ data: { age: 1, others: undefined } }, { data: { others: {} } }],
+      { data: { age: 1, others: {} } },
     ],
     [
-        [{ data: { age: 1, others: {} } }, { data: { others: undefined } }],
-        { data: { age: 1, others: undefined } },
+      [{ data: { age: 1, others: {} } }, { data: { others: undefined } }],
+      { data: { age: 1, others: undefined } },
     ],
-])("should merge one or more objects", (objects, expected) => {
+  ])("should merge one or more objects", (objects, expected) => {
     expect(merge(...objects)).toStrictEqual(expected);
+  });
 });
