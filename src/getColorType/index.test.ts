@@ -1,4 +1,5 @@
-const { getColorType } = require(".");
+import { it, expect, describe } from "@jest/globals";
+import { getColorType } from ".";
 
 describe("getColorType", () => {
   it.each([
@@ -12,6 +13,6 @@ describe("getColorType", () => {
     ["#111111", "hex"],
     ["#aaaaaaaa", "hex"],
   ])('should return the correct type "%s"', (color, expected) => {
-    expect(getColorType(color)).toBe(expected);
+    expect(getColorType(color as string)).toBe(expected);
   });
 });
