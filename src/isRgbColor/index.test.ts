@@ -1,8 +1,9 @@
-const { isRgbColor, isRgbForm, isRgbaForm, extractDataFromRGB } = require(".");
+import { it, expect, describe } from "@jest/globals";
+import { isRgbColor, isRgbForm, isRgbaForm, extractDataFromRGB } from ".";
 
 describe("isRgbColor", () => {
   it.each([[1], [[]], [{}], [null], [undefined]])("should refuse non string values", (value) => {
-    expect(isRgbColor(value)).toBe(false);
+    expect(isRgbColor(value as string)).toBe(false);
   });
 
   it.each([
