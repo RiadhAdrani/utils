@@ -1,7 +1,7 @@
 import { it, expect, describe } from "@jest/globals";
 
 import { convertColor, hslToRgb, rgbToHex, rgbToHsl } from ".";
-import { RGB, HSL, HEX } from "../getColorType";
+import { RGB, HSL, HEX, colorTypes } from "../getColorType";
 
 describe("convertColor", () => {
   it.each([
@@ -70,7 +70,7 @@ describe("convertColor", () => {
   it.each([["hexa"], ["rrggbb"], ["unknown"], ["cyq"]])(
     "should return the input if the target type is unknown",
     (type) => {
-      expect(convertColor("red", type)).toBe("red");
+      expect(convertColor("red", type as colorTypes)).toBe("red");
     }
   );
 
@@ -83,7 +83,7 @@ describe("convertColor", () => {
     ["#121212", "hex"],
     ["#12121299", "hex"],
   ])("should return the input if the target type is the same", (color, type) => {
-    expect(convertColor(color, type)).toBe(color);
+    expect(convertColor(color, type as colorTypes)).toBe(color);
   });
 
   it.each([
