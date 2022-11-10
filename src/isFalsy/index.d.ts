@@ -6,4 +6,4 @@
  * @param value
  * @param additionalFalsyList
  */
-export default function isFalsy(value: any, additionalFalsyList: Array<any>): boolean;
+export default function isFalsy<T>(value: T, additionalFalsyList?: Array<unknown>): boolean;
