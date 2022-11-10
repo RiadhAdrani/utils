@@ -1,7 +1,9 @@
-export type HEX = "hex";
-export type HSL = "hsl";
-export type RGB = "rgb";
-export type UNKNOWN = "unknown";
+export const HEX = "hex";
+export const HSL = "hsl";
+export const RGB = "rgb";
+export const UNKNOWN = "unknown";
+
+export type colorTypes = HEX | HSL | RGB;
 
 /**
  * Try to guess the correct screen color type :

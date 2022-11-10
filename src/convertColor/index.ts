@@ -1,18 +1,25 @@
 // https://css-tricks.com/converting-color-spaces-in-javascript//
 
-const { getColorType, HEX, HSL, RGB, UNKNOWN } = require("../getColorType");
-const { extractDataFromRGB } = require("../isRgbColor");
-const { extractDataFromHSL } = require("../isHslColor");
+import { colorTypes, getColorType, HEX, HSL, RGB, UNKNOWN } from "../getColorType";
+import { extractDataFromHSL } from "../isHslColor";
+import { extractDataFromRGB } from "../isRgbColor";
 
-function hslToRgb(h, s, l) {
+/**
+ * convert given `H S L` values to `R G B`
+ * @param h hue
+ * @param s saturation
+ * @param l lightness
+ */
+export function hslToRgb(h: number, s: number, l: number): [number, number, number] {
   // Must be fractions of 1
   s /= 100;
   l /= 100;
 
-  let c = (1 - Math.abs(2 * l - 1)) * s,
+  const c = (1 - Math.abs(2 * l - 1)) * s,
     x = c * (1 - Math.abs(((h / 60) % 2) - 1)),
-    m = l - c / 2,
-    r = 0,
+    m = l - c / 2;
+
+  let r = 0,
     g = 0,
     b = 0;
 
@@ -48,17 +55,24 @@ function hslToRgb(h, s, l) {
   return [r, g, b];
 }
 
-function rgbToHsl(r, g, b) {
+/**
+ * convert given `R G B` values to `H S L`
+ * @param r red
+ * @param g green
+ * @param b blue
+ */
+export function rgbToHsl(r: number, g: number, b: number): [number, number, number] {
   // Make r, g, and b fractions of 1
   r /= 255;
   g /= 255;
   b /= 255;
 
   // Find greatest and smallest channel values
-  let cMin = Math.min(r, g, b),
+  const cMin = Math.min(r, g, b),
     cMax = Math.max(r, g, b),
-    delta = cMax - cMin,
-    h = 0,
+    delta = cMax - cMin;
+
+  let h = 0,
     s = 0,
     l = 0;
 
@@ -91,25 +105,35 @@ function rgbToHsl(r, g, b) {
   return [round(h), round(s), round(l)];
 }
 
-function rgbToHex(r, g, b, a = 1) {
-  function formatHex(c) {
-    let hex = Math.round(c).toString(16);
+/**
+ * convert given `R G B` values to `#rrggbbaa`
+ * @param r red
+ * @param g green
+ * @param b blue
+ * @param a alpha
+ */
+export function rgbToHex(r: number, g: number, b: number, a = 1): string {
+  function formatHex(c: number) {
+    const hex = Math.round(c).toString(16);
     return hex.length == 1 ? "0" + hex : hex;
   }
 
   return "#" + formatHex(r) + formatHex(g) + formatHex(b) + formatHex(a * 255);
 }
 
-const round = (n) => {
+const round = (n: number): number => {
   return Math.round(n * 100) / 100;
 };
 
 /**
- * @param {string} color
- * @param {string} to
- * @returns
+ * convert a given css declaration to another one.
+ *
+ * supported types : `HEX` | `RGB` | `HSL`
+ *
+ * @param color source
+ * @param to target type
  */
-const convertColor = (color, to) => {
+export const convertColor = (color: string, to: colorTypes): string => {
   const type = getColorType(color);
 
   if (type === UNKNOWN) {
@@ -166,5 +190,3 @@ const convertColor = (color, to) => {
 
   return color;
 };
-
-module.exports = { convertColor, hslToRgb, rgbToHsl, rgbToHex };
