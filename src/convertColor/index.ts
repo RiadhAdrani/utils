@@ -1,6 +1,7 @@
 // https://css-tricks.com/converting-color-spaces-in-javascript//
 
-import { colorTypes, getColorType, HEX, HSL, RGB, UNKNOWN } from "../getColorType";
+import { ColorTypes } from "../../types";
+import { getColorType, HEX, HSL, RGB, UNKNOWN } from "../getColorType";
 import { extractDataFromHSL } from "../isHslColor";
 import { extractDataFromRGB } from "../isRgbColor";
 
@@ -133,7 +134,7 @@ const round = (n: number): number => {
  * @param color source
  * @param to target type
  */
-export const convertColor = (color: string, to: colorTypes): string => {
+export const convertColor = (color: string, to: ColorTypes): string => {
   const type = getColorType(color);
 
   if (type === UNKNOWN) {

@@ -1,7 +1,9 @@
-import { colorTypes, getColorType } from "../getColorType";
+import { getColorType } from "../getColorType";
 import { convertColor } from "../convertColor";
 import { extractDataFromRGB } from "../isRgbColor";
-import { extractDataFromHSL } from "../isHslColor";
+import { extractDataFromHSL, hsla } from "../isHslColor";
+import { Palette, ColorTypes } from "../../types";
+import isInInterval from "../isInInterval";
 
 const normalizeColorToRgbOrThrow = (color: string): string => {
   const rgb = convertColor(color, "rgb");
@@ -26,7 +28,7 @@ const normalizeColorToHSLOrThrow = (color: string): string => {
 };
 
 /**
- * generate a safe color that could be paired with the given one,
+ * generates a safe color that could be paired with the given one,
  * as a text or background color.
  *
  * @param color source
@@ -44,11 +46,11 @@ export const generateContrastSafeColor = (color: string, light = "#fff", dark = 
 };
 
 /**
- * generate a complementary color.
+ * generates a complementary color.
  * @param color source
  * @param type result color type
  */
-export const generateComplementaryColor = (color: string, type?: colorTypes) => {
+export const generateComplementaryColor = (color: string, type?: ColorTypes) => {
   const c = normalizeColorToHSLOrThrow(color);
 
   const [_h, _s, _l, _a] = extractDataFromHSL(c);
@@ -58,4 +60,46 @@ export const generateComplementaryColor = (color: string, type?: colorTypes) => 
   const result = `hsla(${h}deg ${s}% ${l}% / ${a})`;
 
   return convertColor(result, type || "hsl");
+};
+
+/**
+ * generates a tonal palette.
+ * @param color
+ * @param type output colors type
+ * @see https://m3.material.io/styles/color/the-color-system/key-colors-tones#6bdb9471-b70d-42c9-8ace-76743c1fff13
+ */
+export const generateColorTonalPalette = (color: string, type?: ColorTypes): Palette => {
+  const c = normalizeColorToHSLOrThrow(color);
+
+  const palette = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
+
+  const [h, s, , a] = extractDataFromHSL(c);
+
+  const t = type ?? "hsl";
+
+  const colorPalette = {} as Palette;
+
+  palette.forEach((tone) => {
+    const colorTone = hsla(h, s, tone, a ?? 1);
+
+    colorPalette[tone as keyof Palette] = convertColor(colorTone, t);
+  });
+
+  return colorPalette;
+};
+
+/**
+ * generate the same color with a modified opacity.
+ * @param color source
+ * @param opacity opacity
+ * @param type output color type
+ */
+export const changeColorOpacity = (color: string, opacity: number, type?: ColorTypes) => {
+  const c = normalizeColorToHSLOrThrow(color);
+
+  if (!isInInterval(0, opacity, 1)) throw "(opacity) should be a number between 0 and 1.";
+
+  const [h, s, l] = extractDataFromHSL(c);
+
+  return convertColor(hsla(h, s, l, opacity), type ?? "hex");
 };

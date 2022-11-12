@@ -17,5 +17,3 @@ export default function copy<T>(source: T): T {
 
   return target as T;
 }
-
-module.exports = copy;
