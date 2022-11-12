@@ -1,4 +1,21 @@
 import isBlank from "../isBlank";
+import isInInterval from "../isInInterval";
+
+/**
+ * generate an hsla color
+ * @param h hue
+ * @param s saturation
+ * @param l lightness
+ * @param a alpha
+ */
+export const hsla = (h: number, s: number, l: number, a = 1): string => {
+  if (!isInInterval(0, h, 360)) throw "(hue) should be a number between 0 and 360";
+  if (!isInInterval(0, l, 100)) throw "(lightness) should be a number between 0 and 100";
+  if (!isInInterval(0, s, 360)) throw "(saturation) should be a number between 0 and 100";
+  if (!isInInterval(0, a, 1)) throw "(alpha) should be a number between 0 and 1";
+
+  return `hsla(${h}deg ${s}% ${l}% / ${a})`;
+};
 
 export const HSL_REGEX =
   /^hsl\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%\)$/;

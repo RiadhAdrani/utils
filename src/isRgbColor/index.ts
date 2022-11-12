@@ -1,6 +1,25 @@
 import isBlank from "../isBlank";
 import isInInterval from "../isInInterval";
 
+/**
+ * generate an rgba color :
+ *
+ * `rgba(255,255,255,1)`
+ *
+ * @param r red
+ * @param g green
+ * @param b blue
+ * @param a alpha
+ */
+export const rgba = (r: number, g: number, b: number, a = 1): string => {
+  if (!isInInterval(0, r, 255)) throw "(red) should be a number between 0 and 255";
+  if (!isInInterval(0, b, 255)) throw "(green) should be a number between 0 and 255";
+  if (!isInInterval(0, g, 255)) throw "(blue) should be a number between 0 and 255";
+  if (!isInInterval(0, a, 1)) throw "(alpha) should be a number between 0 and 1";
+
+  return `rgba(${r},${g},${b},${a})`;
+};
+
 export const RGB_REGEX =
   /^rgb\((\d{1,3})(\.\d+){0,1},( ){0,1}(\d{1,3})(\.\d+){0,1},( ){0,1}(\d{1,3})(\.\d+){0,1}\)$/;
 
