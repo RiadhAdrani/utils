@@ -17,6 +17,7 @@ export { default as isFunction } from "./src/isFunction";
 // Array and iteration
 export { default as forRange } from "./src/forRange";
 export { default as range } from "./src/range";
+export { default as isArrayOf } from "./src/isArrayOf";
 
 // Number
 export { default as isInInterval } from "./src/isInInterval";

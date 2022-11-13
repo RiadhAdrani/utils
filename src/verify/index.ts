@@ -9,7 +9,7 @@ type Verifier = boolean | (() => boolean | void);
  * other return values will not cause the evaluation to be interrupted.
  * @param verifiers
  */
-export default (...verifiers: Array<Verifier>) => {
+export default function (...verifiers: Array<Verifier>): boolean {
   for (const fn of verifiers) {
     if (typeof fn === "function") {
       const res = fn();
@@ -21,4 +21,4 @@ export default (...verifiers: Array<Verifier>) => {
   }
 
   return true;
-};
+}
