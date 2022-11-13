@@ -21,7 +21,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "build": "rm -rf build && tsc",
-    "pre": "npm run test && npm run build"
+    "up": "npm run test && npm run build && npm publish"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
