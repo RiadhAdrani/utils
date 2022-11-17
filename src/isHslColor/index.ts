@@ -8,14 +8,14 @@ import isInInterval from "../isInInterval";
  * @param l lightness
  * @param a alpha
  */
-export const hsla = (h: number, s: number, l: number, a = 1): string => {
+export function hsla(h: number, s: number, l: number, a = 1): string {
   if (!isInInterval(0, h, 360)) throw "(hue) should be a number between 0 and 360";
   if (!isInInterval(0, l, 100)) throw "(lightness) should be a number between 0 and 100";
   if (!isInInterval(0, s, 360)) throw "(saturation) should be a number between 0 and 100";
   if (!isInInterval(0, a, 1)) throw "(alpha) should be a number between 0 and 1";
 
   return `hsla(${h}deg ${s}% ${l}% / ${a})`;
-};
+}
 
 export const HSL_REGEX =
   /^hsl\((\d{1,3})(\.\d+){0,1}deg (\d{1,3})(\.\d+){0,1}% (\d{1,3})(\.\d+){0,1}%\)$/;
@@ -31,9 +31,9 @@ export const HSLA_REGEX =
  * note that hue, saturation, lightness values are not checked.
  * @param color target
  */
-export const isHslForm = (color: string): boolean => {
+export function isHslForm(color: string): boolean {
   return isBlank(color) ? false : HSL_REGEX.test(color);
-};
+}
 
 /**
  * check if the given color is of an hsla form
@@ -43,9 +43,9 @@ export const isHslForm = (color: string): boolean => {
  * note that hue, saturation, lightness and alpha values are not checked.
  * @param color target
  */
-export const isHslaForm = (color: string): boolean => {
+export function isHslaForm(color: string): boolean {
   return isBlank(color) ? false : HSLA_REGEX.test(color);
-};
+}
 
 /**
  * extract color data from an hsl/a color form.
@@ -54,7 +54,7 @@ export const isHslaForm = (color: string): boolean => {
  *
  * @param color source
  */
-export const extractDataFromHSL = (color: string): number[] => {
+export function extractDataFromHSL(color: string): number[] {
   if (isHslaForm(color)) {
     return color
       .slice(5, -1)
@@ -77,7 +77,7 @@ export const extractDataFromHSL = (color: string): number[] => {
   }
 
   throw "(color) is not of a HSL/HSLA form.";
-};
+}
 
 /**
  * Check if the given color is in an HSL or HSLA format:
@@ -85,7 +85,7 @@ export const extractDataFromHSL = (color: string): number[] => {
  * - `hsla(h,s,l,a)`
  * @param color target
  */
-export const isHslColor = (color: string): boolean => {
+export function isHslColor(color: string): boolean {
   if (isBlank(color)) {
     return false;
   }
@@ -113,4 +113,4 @@ export const isHslColor = (color: string): boolean => {
   }
 
   return false;
-};
+}

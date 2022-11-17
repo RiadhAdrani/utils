@@ -11,14 +11,14 @@ import isInInterval from "../isInInterval";
  * @param b blue
  * @param a alpha
  */
-export const rgba = (r: number, g: number, b: number, a = 1): string => {
+export function rgba(r: number, g: number, b: number, a = 1): string {
   if (!isInInterval(0, r, 255)) throw "(red) should be a number between 0 and 255";
   if (!isInInterval(0, b, 255)) throw "(green) should be a number between 0 and 255";
   if (!isInInterval(0, g, 255)) throw "(blue) should be a number between 0 and 255";
   if (!isInInterval(0, a, 1)) throw "(alpha) should be a number between 0 and 1";
 
   return `rgba(${r},${g},${b},${a})`;
-};
+}
 
 export const RGB_REGEX =
   /^rgb\((\d{1,3})(\.\d+){0,1},( ){0,1}(\d{1,3})(\.\d+){0,1},( ){0,1}(\d{1,3})(\.\d+){0,1}\)$/;
@@ -34,9 +34,9 @@ export const RGBA_REGEX =
  * note that red, green and blue values are not checked
  * @param color target
  */
-export const isRgbForm = (color: string): boolean => {
+export function isRgbForm(color: string): boolean {
   return isBlank(color) ? false : RGB_REGEX.test(color);
-};
+}
 
 /**
  * check if the given color is of an rgba form
@@ -46,9 +46,9 @@ export const isRgbForm = (color: string): boolean => {
  * note that red, green, blue and alpha values are not checked.
  * @param color target
  */
-export const isRgbaForm = (color: string): boolean => {
+export function isRgbaForm(color: string): boolean {
   return isBlank(color) ? false : RGBA_REGEX.test(color);
-};
+}
 
 /**
  * extract color data from an rgb/a color form.
@@ -57,7 +57,7 @@ export const isRgbaForm = (color: string): boolean => {
  *
  * @param color source
  */
-export const extractDataFromRGB = (color: string): number[] => {
+export function extractDataFromRGB(color: string): number[] {
   if (isRgbaForm(color)) {
     return color
       .slice(5, -1)
@@ -73,7 +73,7 @@ export const extractDataFromRGB = (color: string): number[] => {
   }
 
   throw "(color) is not of a RGB/RGBA form.";
-};
+}
 
 /**
  * Check if the given color is in an RGB or RGBA format:
@@ -81,7 +81,7 @@ export const extractDataFromRGB = (color: string): number[] => {
  * - `rgba(r,g,b,a)`
  * @param color
  */
-export const isRgbColor = (color: string): boolean => {
+export function isRgbColor(color: string): boolean {
   if (isBlank(color)) {
     return false;
   }
@@ -107,4 +107,4 @@ export const isRgbColor = (color: string): boolean => {
   }
 
   return false;
-};
+}

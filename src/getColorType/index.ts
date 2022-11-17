@@ -13,6 +13,6 @@ export const UNKNOWN = "unknown";
  * `hex`, `hsl`, `rgb` or `unknown`
  * @param color target
  */
-export const getColorType = (color: string): ColorTypes | "unknown" => {
+export function getColorType(color: string): ColorTypes | "unknown" {
   return isHexColor(color) ? HEX : isHslColor(color) ? HSL : isRgbColor(color) ? RGB : UNKNOWN;
-};
+}

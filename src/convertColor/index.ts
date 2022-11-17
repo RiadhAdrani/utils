@@ -134,7 +134,7 @@ const round = (n: number): number => {
  * @param color source
  * @param to target type
  */
-export const convertColor = (color: string, to: ColorTypes): string => {
+export function convertColor(color: string, to: ColorTypes): string {
   const type = getColorType(color);
 
   if (type === UNKNOWN) {
@@ -190,4 +190,4 @@ export const convertColor = (color: string, to: ColorTypes): string => {
   }
 
   return color;
-};
+}
