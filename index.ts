@@ -22,6 +22,7 @@ export { default as isArrayOf } from "./src/isArrayOf";
 // Number
 export { default as isInInterval } from "./src/isInInterval";
 export { default as clamp } from "./src/clamp";
+export * from "./src/calcDistance";
 
 // Time
 export * from "./src/since";
