@@ -11,7 +11,7 @@ import isInInterval from "../isInInterval";
 export function hsla(h: number, s: number, l: number, a = 1): string {
   if (!isInInterval(0, h, 360)) throw "(hue) should be a number between 0 and 360";
   if (!isInInterval(0, l, 100)) throw "(lightness) should be a number between 0 and 100";
-  if (!isInInterval(0, s, 360)) throw "(saturation) should be a number between 0 and 100";
+  if (!isInInterval(0, s, 100)) throw "(saturation) should be a number between 0 and 100";
   if (!isInInterval(0, a, 1)) throw "(alpha) should be a number between 0 and 1";
 
   return `hsla(${h}deg ${s}% ${l}% / ${a})`;

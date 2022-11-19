@@ -5,6 +5,9 @@ export { default as areEqual } from "./src/areEqual";
 export { default as wrap } from "./src/wrap";
 export { default as capitalize } from "./src/capitalize";
 
+// Asynchronous
+export { default as runAfter } from "./src/runAfter";
+
 // Objects
 export { default as isFalsy } from "./src/isFalsy";
 export { default as copy } from "./src/copy";
