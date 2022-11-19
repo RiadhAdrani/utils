@@ -1,6 +1,6 @@
 {
   "name": "@riadh-adrani/utility-js",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "description": "contains utility functions",
   "types": "build/index.d.ts",
   "main": "build/index.js",

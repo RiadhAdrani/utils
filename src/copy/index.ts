@@ -1,5 +1,5 @@
 import isFalsy from "../isFalsy";
-import isFunction from "../isFunction";
+import { isFunction } from "../isFunction";
 import isPrimitiveType from "../isPrimitiveType";
 
 /**
