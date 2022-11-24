@@ -21,6 +21,7 @@ export * from "./src/isFunction";
 export { default as forRange } from "./src/forRange";
 export { default as range } from "./src/range";
 export { default as isArrayOf } from "./src/isArrayOf";
+export { default as shuffle } from "./src/shuffle";
 
 // Number
 export { default as isInInterval } from "./src/isInInterval";
@@ -37,6 +38,3 @@ export * from "./src/isHslColor";
 export * from "./src/getColorType";
 export * from "./src/convertColor";
 export * from "./src/generateColor";
-
-// Types
-export * from "./types";
