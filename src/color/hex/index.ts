@@ -1,4 +1,4 @@
-import isBlank from "../isBlank";
+import { isBlank } from "../../string";
 
 /**
  * Determine if the given string is a hex color.

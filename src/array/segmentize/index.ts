@@ -1,4 +1,4 @@
-import forRange from "../forRange";
+import { forRange } from "../../iteration";
 
 /**
  * divide an array into `segments` (smaller arrays).

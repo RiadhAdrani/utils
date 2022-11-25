@@ -1,8 +1,8 @@
 import { it, expect, describe } from "@jest/globals";
 
 import { convertColor, hslToRgb, rgbToHex, rgbToHsl } from ".";
-import { ColorTypes } from "../../types";
-import { RGB, HSL, HEX } from "../getColorType";
+import { ColorTypes } from "../../../types";
+import { RGB, HSL, HEX } from "../getType";
 
 describe("convertColor", () => {
   it.each([

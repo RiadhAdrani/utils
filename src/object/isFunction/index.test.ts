@@ -1,5 +1,5 @@
 import { it, expect, describe } from "@jest/globals";
-import { isFunction } from ".";
+import isFunction from ".";
 
 describe("isFunction", () => {
   it.each([

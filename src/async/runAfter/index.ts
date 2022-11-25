@@ -1,4 +1,4 @@
-import { isFunction } from "../isFunction";
+import isFunction from "../../object/isFunction";
 
 /**
  * execute a timeout callback as an asynchronous function.

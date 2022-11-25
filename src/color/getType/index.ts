@@ -1,7 +1,7 @@
-import { ColorTypes } from "../../types";
-import isHexColor from "../isHexColor";
-import { isHslColor } from "../isHslColor";
-import { isRgbColor } from "../isRgbColor";
+import { ColorTypes } from "../../../types";
+import isHexColor from "../hex";
+import { isHslColor } from "../hsl";
+import { isRgbColor } from "../rgb";
 
 export const HEX = "hex";
 export const HSL = "hsl";

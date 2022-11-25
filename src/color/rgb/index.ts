@@ -1,5 +1,5 @@
-import isBlank from "../isBlank";
-import isInInterval from "../isInInterval";
+import { isBlank } from "../../string";
+import { isInInterval } from "../../math";
 
 /**
  * generate an rgba color :

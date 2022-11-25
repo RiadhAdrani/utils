@@ -1,4 +1,4 @@
-import { isFunction } from "../isFunction";
+import { isFunction } from "../../object";
 
 /**
  * check if each element of the array fullfil the provided condition.
