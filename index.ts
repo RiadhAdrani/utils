@@ -22,6 +22,7 @@ export { default as forRange } from "./src/forRange";
 export { default as range } from "./src/range";
 export { default as isArrayOf } from "./src/isArrayOf";
 export { default as shuffle } from "./src/shuffle";
+export { default as segmentize } from "./src/segmentize";
 
 // Number
 export { default as isInInterval } from "./src/isInInterval";
