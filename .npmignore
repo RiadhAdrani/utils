@@ -1,5 +1,6 @@
 .github
 .vscode
+docs
 package-lock.json
 README.md
 src/**/*.test.js
