@@ -1,4 +1,4 @@
-import { ColorTypes } from "../../../types";
+import { ColorType } from "..";
 import isHexColor from "../hex";
 import { isHslColor } from "../hsl";
 import { isRgbColor } from "../rgb";
@@ -13,6 +13,6 @@ export const UNKNOWN = "unknown";
  * `hex`, `hsl`, `rgb` or `unknown`
  * @param color target
  */
-export function getColorType(color: string): ColorTypes | "unknown" {
+export function getColorType(color: string): ColorType | "unknown" {
   return isHexColor(color) ? HEX : isHslColor(color) ? HSL : isRgbColor(color) ? RGB : UNKNOWN;
 }

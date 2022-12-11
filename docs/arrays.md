@@ -2,6 +2,14 @@
 
 [[toc]]
 
+## Types
+
+#### `TypeOrArray`
+
+```ts
+type TypeOrArray<T> = T | Array<T>;
+```
+
 ## isArrayOf()
 
 checks if each element of the array fullfil the provided condition.

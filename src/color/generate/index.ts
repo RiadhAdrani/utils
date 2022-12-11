@@ -2,7 +2,7 @@ import { getColorType } from "../getType";
 import { convertColor } from "../convert";
 import { extractDataFromRGB } from "../rgb";
 import { extractDataFromHSL, hsla } from "../hsl";
-import { Palette, ColorTypes } from "../../../types";
+import { Palette, ColorType } from "..";
 import { isInInterval } from "../../math";
 
 function normalizeColorToRgbOrThrow(color: string): string {
@@ -50,7 +50,7 @@ export function generateContrastSafeColor(color: string, light = "#fff", dark = 
  * @param color source
  * @param type result color type
  */
-export function generateComplementaryColor(color: string, type?: ColorTypes) {
+export function generateComplementaryColor(color: string, type?: ColorType) {
   const c = normalizeColorToHSLOrThrow(color);
 
   const [_h, _s, _l, _a] = extractDataFromHSL(c);
@@ -68,7 +68,7 @@ export function generateComplementaryColor(color: string, type?: ColorTypes) {
  * @param type output colors type
  * @see https://m3.material.io/styles/color/the-color-system/key-colors-tones#6bdb9471-b70d-42c9-8ace-76743c1fff13
  */
-export function generateColorTonalPalette(color: string, type?: ColorTypes): Palette {
+export function generateColorTonalPalette(color: string, type?: ColorType): Palette {
   const c = normalizeColorToHSLOrThrow(color);
 
   const palette = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
@@ -94,7 +94,7 @@ export function generateColorTonalPalette(color: string, type?: ColorTypes): Pal
  * @param opacity opacity
  * @param type output color type
  */
-export function changeColorOpacity(color: string, opacity: number, type?: ColorTypes) {
+export function changeColorOpacity(color: string, opacity: number, type?: ColorType) {
   const c = normalizeColorToHSLOrThrow(color);
 
   if (!isInInterval(0, opacity, 1)) throw "(opacity) should be a number between 0 and 1.";
