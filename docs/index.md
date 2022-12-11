@@ -17,3 +17,7 @@ lang: en-US
 [Iteration](./iteration.md)
 
 [Math](./math.md)
+
+[Object](./object.md)
+
+[String](./string.md)
