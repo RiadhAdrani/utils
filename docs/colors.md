@@ -1,5 +1,7 @@
 # Colors
 
+[[toc]]
+
 ## Types
 
 #### `ColorTypes`

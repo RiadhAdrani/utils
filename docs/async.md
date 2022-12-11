@@ -1,5 +1,7 @@
 # Async
 
+[[toc]]
+
 ## runAfter()
 
 create a promise that will resolve after the given amount of time in milliseconds.
