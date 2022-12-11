@@ -4,34 +4,17 @@ import forRange from ".";
 
 describe("forRange", () => {
   it.each([
-    [
-      () => {
-        ("");
-      },
-      5,
-      0,
-      null,
-      undefined,
-    ],
-    [
-      () => {
-        ("");
-      },
-      5,
-      null,
-      1,
-      undefined,
-    ],
-    [
-      () => {
-        ("");
-      },
-      null,
-      0,
-      1,
-      undefined,
-    ],
-    [null, 5, 0, 1, undefined],
+    [() => 1, 5, 0, null],
+    [() => 1, 5, null, 1],
+    [() => 1, null, 0, 1],
+    [null, 5, 0, 1],
+  ])("should throw", (callback, end, start, step) => {
+    expect(() =>
+      forRange(callback as () => void, end as number, start as number, step as number)
+    ).toThrow();
+  });
+
+  it.each([
     [() => 1, 5, 0, 1, 1],
     [
       (i: number) => {
