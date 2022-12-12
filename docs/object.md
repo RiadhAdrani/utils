@@ -37,7 +37,7 @@ function copy<T>(source: T): T;
 checks if the given object has the named property as a key.
 
 ```ts
-function hasProperty<T>(object: T, property: string): T;
+function hasProperty<T>(object: T, property: string): boolean;
 ```
 
 - _`object`_ : source object.
