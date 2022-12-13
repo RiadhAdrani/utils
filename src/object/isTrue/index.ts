@@ -17,3 +17,27 @@ export function isTrue(condition: Condition): boolean {
 
   return res;
 }
+
+export function isNumber(o: unknown): boolean {
+  return isTrue(typeof o === "number");
+}
+
+export function isString(o: unknown): boolean {
+  return isTrue(typeof o === "string");
+}
+
+export function isArray(o: unknown): boolean {
+  return isTrue(Array.isArray(o));
+}
+
+export function isObject(o: unknown): boolean {
+  return isTrue(typeof o === "object");
+}
+
+export function isNull(o: unknown): boolean {
+  return isTrue(o === null);
+}
+
+export function isDefined(o: unknown): boolean {
+  return isTrue(typeof o !== "undefined");
+}
