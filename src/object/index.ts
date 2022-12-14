@@ -6,5 +6,6 @@ export { default as isPrimitiveType } from "./isPrimitiveType";
 export { default as merge } from "./merge";
 export { default as verify } from "./verify";
 export { default as copy } from "./copy";
+export * from "./isTrue";
 
 export type ObjectOf<T> = { [key: string]: T };
