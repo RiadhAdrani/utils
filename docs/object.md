@@ -10,6 +10,12 @@
 type Verifier = boolean | (() => boolean | void);
 ```
 
+#### `Condition`
+
+```ts
+type Condition = boolean | (() => boolean);
+```
+
 ## areEqual()
 
 perform deep comparison of two objects of any type.
@@ -56,7 +62,7 @@ function isFalsy<T>(value: T, additionalFalsyList?: unknown[]): boolean;
 - _`value`_ : source object.
 - _`additionalFalsyList`_ : a list of additional value that should be considered falsy..
 
-## isFalsy()
+## isFunction()
 
 checks if an object is a function.
 
@@ -101,3 +107,76 @@ function verify(...verifiers: Verifier[]): boolean;
 ```
 
 - _`...verifiers`_ : statements/conditions.
+
+## isTrue()
+
+checks if the condition provided is true.
+
+```ts
+function isTrue(condition: Condition): boolean;
+```
+
+- _`condition`_ : testable condition.
+
+> throws when the condition is neither a `boolean` or a `function`.
+> throws when the return type of the condition is not `boolean`.
+
+## isNumber()
+
+checks if the object provided is a number.
+
+```ts
+function isNumber(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isString()
+
+checks if the object provided is a string.
+
+```ts
+function isString(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isArray()
+
+checks if the object provided is an array.
+
+```ts
+function isArray(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isObject()
+
+checks if the object provided is an object.
+
+```ts
+function isObject(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isNull()
+
+checks if the object provided is null.
+
+```ts
+function isNull(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isDefined()
+
+checks if the object provided is different than `undefined`.
+
+```ts
+function isDefined(o: unknown): boolean;
+```
+
+- _`o`_ : any object.

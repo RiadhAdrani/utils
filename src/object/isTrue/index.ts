@@ -1,5 +1,9 @@
 export type Condition = boolean | (() => boolean);
 
+/**
+ * checks if the condition provided is true.
+ * @param condition comparison or function.
+ */
 export function isTrue(condition: Condition): boolean {
   if (typeof condition === "boolean") {
     return condition;
@@ -18,26 +22,52 @@ export function isTrue(condition: Condition): boolean {
   return res;
 }
 
+/**
+ * checks if the object provided is a number.
+ * @param o
+ */
 export function isNumber(o: unknown): boolean {
   return isTrue(typeof o === "number");
 }
 
+/**
+ * checks if the object provided is a string.
+ * @param o
+ */
 export function isString(o: unknown): boolean {
   return isTrue(typeof o === "string");
 }
 
+/**
+ * checks if the object provided is an array.
+ * @param o
+ */
 export function isArray(o: unknown): boolean {
   return isTrue(Array.isArray(o));
 }
 
+/**
+ * checks if the object provided is an object.
+ * @param o
+ */
 export function isObject(o: unknown): boolean {
   return isTrue(typeof o === "object");
 }
 
+/**
+ * checks if the object provided is null.
+ * @param o
+ */
 export function isNull(o: unknown): boolean {
   return isTrue(o === null);
 }
 
+/**
+ * checks if the object provided is defined, different of `undefined`.
+ *
+ * In Javascript land, `null` is considered a defined object.
+ * @param o
+ */
 export function isDefined(o: unknown): boolean {
   return isTrue(typeof o !== "undefined");
 }
