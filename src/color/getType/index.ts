@@ -1,5 +1,5 @@
 import { ColorType } from "..";
-import isHexColor from "../hex";
+import { isHexColor } from "../hex";
 import { isHslColor } from "../hsl";
 import { isRgbColor } from "../rgb";
 

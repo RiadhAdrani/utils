@@ -1,5 +1,5 @@
 import { it, expect, describe } from "@jest/globals";
-import isHexColor from ".";
+import { isHexColor } from ".";
 
 describe("isHex", () => {
   it.each([
