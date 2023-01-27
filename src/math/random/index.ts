@@ -18,7 +18,7 @@ export default function (min: number, max: number, float = false): number {
     return min;
   }
 
-  const rnd = Math.random() * (max - min + 1) + min;
+  const rnd = Math.random() * (max - min) + min;
 
   return float ? Math.floor(rnd) : rnd;
 }
