@@ -48,6 +48,7 @@ describe("Index file", () => {
     expect(isDefined(All.calcDistance3d)).toBe(true);
     expect(isDefined(All.clamp)).toBe(true);
     expect(isDefined(All.isInInterval)).toBe(true);
+    expect(isDefined(All.random)).toBe(true);
   });
 
   it("should contain all object exports", () => {
