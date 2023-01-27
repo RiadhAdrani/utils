@@ -72,3 +72,17 @@ function calcDistance(
 - _`z2`_ : second point z coordinate.
 
 > _throws when one/more argument/s is/are not of type number._
+
+## random()
+
+generate a random number in a given interval.
+
+```ts
+function random(min: number, max: number, float?: boolean): number;
+```
+
+- _`min`_ : minimum value.
+- _`max`_ : maximum value, exclusive.
+- _`float`_ : allow float values. `false` by default.
+
+> _throws when one/more argument/s is/are not of type number._ > _throws when (min) is greater than (max)._
