@@ -18,8 +18,6 @@ describe("random", () => {
   it("should return a number between min and max", () => {
     const rnd = random(0, 5);
 
-    console.log(rnd);
-
     expect(isInInterval(0, rnd, 5)).toBe(true);
   });
 });
