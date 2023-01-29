@@ -74,5 +74,6 @@ describe("Index file", () => {
     expect(isDefined(All.isBlank)).toBe(true);
     expect(isDefined(All.isEmpty)).toBe(true);
     expect(isDefined(All.wrap)).toBe(true);
+    expect(isDefined(All.ellipsify)).toBe(true);
   });
 });

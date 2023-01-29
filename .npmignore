@@ -4,6 +4,7 @@ docs
 package-lock.json
 README.md
 src/**/*.test.js
+src/**/*.test.ts
 .eslintignore
 .eslintrc
 .gitignore

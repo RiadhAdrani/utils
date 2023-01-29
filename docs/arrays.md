@@ -53,7 +53,7 @@ function segmentize<T>(array: T[], segmentLength: number): Array<T[]>;
 
 shuffle an array an return the result.
 
-> The resulting array is not guaranteed to be different from the original one.
+> _The resulting array is not guaranteed to be different from the original one._
 
 ```ts
 function shuffle<T>(input: T[]): T[];

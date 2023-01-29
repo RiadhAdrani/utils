@@ -52,13 +52,13 @@ function hsla(h: number, s: number, l: number, a?: number): string;
 - _`l`_ : lightness.
 - _`a`_ : alpha, by default set to `1`.
 
-> throws when `h` is not between `0..360`
+> _throws when `h` is not between `0..360`_
 
-> throws when `s` is not between `0..100`
+> _throws when `s` is not between `0..100`_
 
-> throws when `l` is not between `0..100`
+> _throws when `l` is not between `0..100`_
 
-> throws when `a` is not between `0..1`
+> _throws when `a` is not between `0..1`_
 
 ## rgba()
 
@@ -73,13 +73,13 @@ function rgba(r: number, g: number, b: number, a?: number): string;
 - _`b`_ : blue.
 - _`a`_ : alpha, by default set to `1`.
 
-> throws when `r` is not between `0..255`
+> _throws when `r` is not between `0..255`_
 
-> throws when `g` is not between `0..255`
+> _throws when `g` is not between `0..255`_
 
-> throws when `b` is not between `0..255`
+> _throws when `b` is not between `0..255`_
 
-> throws when `a` is not between `0..1`
+> _throws when `a` is not between `0..1`_
 
 ## isRgbForm()
 
@@ -115,7 +115,7 @@ function extractDataFromRGB(color: string): number[];
 
 - _`color`_ : target color.
 
-> throws if the type of the color is not `rgb/a`
+> _throws if the type of the color is not `rgb/a`_
 
 ## isRgbColor()
 
@@ -171,7 +171,7 @@ function extractDataFromHSL(color: string): number[];
 
 - _`color`_ : target color.
 
-> throws if the type of the color is not `hsl/a`
+> _throws if the type of the color is not `hsl/a`_
 
 ## isHslColor()
 
@@ -244,7 +244,7 @@ function generateContrastSafeColor(color: string, light?: string, dark?: string)
 - _`light`_ : returned color if the given color is dark. `#fff` by default.
 - _`dark`_ : returned color if the given color is dark. `#000` by default.
 
-> throws when color type is non-identifiable.
+> _throws when color type is non-identifiable._
 
 ## generateComplementaryColor()
 
@@ -257,7 +257,7 @@ function generateComplementaryColor(color: string, to?: ColorTypes): string;
 - _`color`_ : color as string.
 - _`to`_ : resulting color type.
 
-> throws when color type is non-identifiable.
+> _throws when color type is non-identifiable._
 
 ## generateColorTonalPalette()
 
@@ -270,7 +270,7 @@ function generateComplementaryColor(color: string, to?: ColorTypes): Palette;
 - _`color`_ : color as string.
 - _`to`_ : resulting colors type.
 
-> throws when color type is non-identifiable.
+> _throws when color type is non-identifiable._
 
 ## changeColorOpacity()
 
@@ -284,6 +284,6 @@ function changeColorOpacity(color: string, opacity: number, to?: ColorTypes): st
 - _`opacity`_ : opacity value between `0` and `1`.
 - _`to`_ : resulting colors type. `hex` by default.
 
-> throws when color type is non-identifiable.
+> _throws when color type is non-identifiable._
 
-> throws an error when opacity is not between `0` and `1`.
+> _throws an error when opacity is not between `0` and `1`._

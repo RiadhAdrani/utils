@@ -16,7 +16,7 @@ function isInInterval(min: number, value: number, max: number): boolean;
 
 > _throws when one/more argument/s is/are not of type number._
 
-> _throws when min is superior to max._
+> _throws when `min` is superior to max._
 
 ## clamp()
 
@@ -32,7 +32,7 @@ function clamp(min: number, n: number, max: number): number;
 
 > _throws when one/more argument/s is/are not of type number._
 
-> _throws when min is superior to max._
+> _throws when `min` is superior to max._
 
 ## calcDistance()
 
@@ -85,4 +85,4 @@ function random(min: number, max: number, float?: boolean): number;
 - _`max`_ : maximum value, exclusive.
 - _`float`_ : allow float values. `false` by default.
 
-> _throws when one/more argument/s is/are not of type number._ > _throws when (min) is greater than (max)._
+> _throws when one/more argument/s is/are not of type number._ > _throws when `min` is greater than `max`._
