@@ -4,10 +4,10 @@
 
 ## Types
 
-#### `TypeOrArray`
+#### `Arrayable`
 
 ```ts
-type TypeOrArray<T> = T | Array<T>;
+type Arrayable<T> = T | Array<T>;
 ```
 
 ## isArrayOf()
