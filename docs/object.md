@@ -180,3 +180,16 @@ function isDefined(o: unknown): boolean;
 ```
 
 - _`o`_ : any object.
+
+## forEachKey()
+
+run a callback for each key in a `Record`.
+
+```ts
+function <T>(callback: (key: string, value: T, index: number) => void, object: Record<string, T>)
+```
+
+- _`callback`_ : callback to be executed.
+- _`object`_ : source object.
+
+> _throws when object is not an object._

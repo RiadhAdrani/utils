@@ -6,6 +6,10 @@ describe("forEachKey", () => {
     expect(() => forEachKey(() => 0, 1 as unknown as Record<string, string>)).toThrow();
   });
 
+  it("should throw when callback is invalid", () => {
+    expect(() => forEachKey(1 as unknown as () => void, {})).toThrow();
+  });
+
   it("should run with correct values", () => {
     const callback = jest.fn();
 
