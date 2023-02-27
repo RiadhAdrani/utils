@@ -1,5 +1,5 @@
 {
-  "name": "@ri/utils",
+  "name": "@riadh-adrani/utils",
   "version": "0.32.0",
   "description": "contains utility functions",
   "types": "build/index.d.ts",
