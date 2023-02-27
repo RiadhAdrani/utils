@@ -6,6 +6,7 @@ export { default as isPrimitiveType } from "./isPrimitiveType";
 export { default as merge } from "./merge";
 export { default as verify } from "./verify";
 export { default as copy } from "./copy";
+export { default as forEachKey } from "./forEachKey";
 export * from "./isTrue";
 
-export type ObjectOf<T> = { [key: string]: T };
+export type ObjectOf<T> = Record<string, T>;
