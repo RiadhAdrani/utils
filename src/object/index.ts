@@ -7,6 +7,8 @@ export { default as merge } from "./merge";
 export { default as verify } from "./verify";
 export { default as copy } from "./copy";
 export { default as forEachKey } from "./forEachKey";
+export { default as pick } from "./pick";
+
 export * from "./isTrue";
 
 export type ObjectOf<T> = Record<string, T>;

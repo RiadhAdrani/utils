@@ -193,3 +193,14 @@ function <T>(callback: (key: string, value: T, index: number) => void, object: R
 - _`object`_ : source object.
 
 > _throws when object is not an object._
+
+## pick()
+
+creates a new object with only the given keys.
+
+```ts
+function pick<T>(object: T, ...keys: Array<keyof T>): Pick<T, typeof keys[number]>;
+```
+
+- _`object`_ : source object.
+- _`...keys`_ : object's key to preserve.

@@ -68,6 +68,7 @@ describe("Index file", () => {
     expect(isDefined(All.merge)).toBe(true);
     expect(isDefined(All.verify)).toBe(true);
     expect(isDefined(All.forEachKey)).toBe(true);
+    expect(isDefined(All.pick)).toBe(true);
   });
 
   it("should contain all string exports", () => {
