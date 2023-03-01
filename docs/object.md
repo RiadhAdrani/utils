@@ -204,3 +204,14 @@ function pick<T>(object: T, ...keys: Array<keyof T>): Pick<T, typeof keys[number
 
 - _`object`_ : source object.
 - _`...keys`_ : object's key to preserve.
+
+## omit()
+
+creates a new object omitting the given keys.
+
+```ts
+function omit<T>(object: T, ...keys: Array<keyof T>): Omit<T, typeof keys[number]>;
+```
+
+- _`object`_ : source object.
+- _`...keys`_ : object's key to omit
