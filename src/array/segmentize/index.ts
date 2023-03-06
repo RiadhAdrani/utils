@@ -5,8 +5,8 @@ import { forRange } from "../../iteration";
  * @param array source
  * @param segmentLength segment length
  */
-export default function <T>(array: T[], segmentLength: number): Array<T[]> {
-  const output: T[][] = [];
+export default function <T>(array: Array<T>, segmentLength: number): Array<Array<T>> {
+  const output: Array<Array<T>> = [];
 
   forRange(
     (index) => {

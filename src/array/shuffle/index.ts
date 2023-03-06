@@ -3,7 +3,7 @@
  * @param input initial array
  * @see https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
  */
-export default function shuffle<T>(input: T[]): T[] {
+export default function shuffle<T>(input: Array<T>): Array<T> {
   let currentIndex = input.length,
     randomIndex;
 

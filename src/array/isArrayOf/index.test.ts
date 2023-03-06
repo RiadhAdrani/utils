@@ -19,6 +19,6 @@ describe("isArrayOf", () => {
     [[() => "", () => 2, () => 5], "function", true],
     [[() => "", [], () => 2, () => 5], "function", false],
   ])("should check each element of the array '%s<%s>' => '%s'", (object, condition, expected) => {
-    expect(isArrayOf(object, condition)).toBe(expected);
+    expect(isArrayOf<unknown>(object, condition)).toBe(expected);
   });
 });

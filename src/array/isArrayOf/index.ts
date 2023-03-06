@@ -5,10 +5,7 @@ import { isFunction } from "../../object";
  * @param array source
  * @param condition a type or a callback to be executed.
  */
-export default function (
-  array: Array<unknown>,
-  condition: string | ((item: unknown) => boolean)
-): boolean {
+export default function <T>(array: Array<T>, condition: string | ((item: T) => boolean)): boolean {
   if (!Array.isArray(array)) throw "(array) should be of type array.";
 
   if (!isFunction(condition) && typeof condition !== "string")

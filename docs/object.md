@@ -199,7 +199,7 @@ function <T>(callback: (key: string, value: T, index: number) => void, object: R
 creates a new object with only the given keys.
 
 ```ts
-function pick<T>(object: T, ...keys: Array<keyof T>): Pick<T, typeof keys[number]>;
+function pick<T extends Object, K extends keyof T>(object: T, ...keys: Array<K>): Pick<T, K>;
 ```
 
 - _`object`_ : source object.
@@ -210,7 +210,7 @@ function pick<T>(object: T, ...keys: Array<keyof T>): Pick<T, typeof keys[number
 creates a new object omitting the given keys.
 
 ```ts
-function omit<T>(object: T, ...keys: Array<keyof T>): Omit<T, typeof keys[number]>;
+function omit<T extends Object, K extends keyof T>(object: T, ...keys: Array<K>): Omit<T, K>;
 ```
 
 - _`object`_ : source object.

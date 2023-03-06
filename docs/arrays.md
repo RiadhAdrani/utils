@@ -15,7 +15,7 @@ type Arrayable<T> = T | Array<T>;
 checks if each element of the array fullfil the provided condition.
 
 ```ts
-function isArrayOf(array: unknown[], condition: string | ((item: unknown) => boolean)): boolean;
+function isArrayOf<T>(array: Array<T>, condition: string | ((item: T) => boolean)): boolean;
 ```
 
 - _`array`_ : the array in question.
@@ -28,7 +28,7 @@ function isArrayOf(array: unknown[], condition: string | ((item: unknown) => boo
 creates an array of numbers in the given interval.
 
 ```ts
-function range(end: number, start?: number): number[];
+function range(end: number, start?: number): Array<number>;
 ```
 
 - _`end`_ : ending number.
