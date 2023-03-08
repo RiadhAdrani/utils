@@ -221,10 +221,11 @@ function omit<T extends Object, K extends keyof T>(object: T, ...keys: Array<K>)
 modifies the target object by copying keys from the source, excluding the provided ones.
 
 ```ts
-function copyKeys<
-  F extends Record<string | number, unknown>,
-  T extends Record<string | number, unknown>
->(source: F, target: T, ...exclude: Array<keyof F>): void;
+function copyKeys<F extends Object, T extends Object>(
+  source: F,
+  target: T,
+  ...exclude: Array<keyof F>
+): void;
 ```
 
 - _`source`_ : source object.

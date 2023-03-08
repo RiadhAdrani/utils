@@ -6,13 +6,14 @@ import forEachKey from "../forEachKey";
  * @param target
  * @param exclude
  */
-export default function copyKeys<
-  F extends Record<string | number, unknown>,
-  T extends Record<string | number, unknown>
->(source: F, target: T, ...exclude: Array<keyof F>): void {
+export default function copyKeys<F extends Object, T extends Object>(
+  source: F,
+  target: T,
+  ...exclude: Array<keyof F>
+): void {
   forEachKey((key, value) => {
-    if (!exclude.includes(key)) {
+    if (!exclude.includes(key as keyof F)) {
       target[key as keyof T] = value as T[keyof T];
     }
-  }, source);
+  }, source as Record<string, unknown>);
 }
