@@ -70,6 +70,7 @@ describe("Index file", () => {
     expect(isDefined(All.forEachKey)).toBe(true);
     expect(isDefined(All.pick)).toBe(true);
     expect(isDefined(All.omit)).toBe(true);
+    expect(isDefined(All.copyKeys)).toBe(true);
   });
 
   it("should contain all string exports", () => {
