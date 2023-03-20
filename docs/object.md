@@ -231,3 +231,19 @@ function copyKeys<F extends Object, T extends Object>(
 - _`source`_ : source object.
 - _`target`_ : target object.
 - _`...exclude`_ : object's key to exclude.
+
+## findKey()
+
+find a key value pair from an object satisfying the given callback. returns `undefined` otherwise.
+
+returns an object with `key` and `value` as keys.
+
+```ts
+function findKey<T extends Object>(
+  callback: (key: keyof T, value: T[keyof T]) => boolean,
+  object: T
+): { key: keyof T; value: T[keyof T] } | undefined;
+```
+
+- _`callback`_ : predicate to be executed for each key of the object..
+- _`object`_ : source.

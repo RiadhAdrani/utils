@@ -10,6 +10,7 @@ export { default as forEachKey } from "./forEachKey";
 export { default as pick } from "./pick";
 export { default as omit } from "./omit";
 export { default as copyKeys } from "./copyKeys";
+export { default as findKey } from "./findKey";
 
 export * from "./isTrue";
 
