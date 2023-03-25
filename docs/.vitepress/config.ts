@@ -2,7 +2,7 @@ import type { UserConfig } from "vitepress";
 
 const config: UserConfig = {
   themeConfig: {
-    siteTitle: "Utility-js",
+    siteTitle: "Utils",
     sidebar: [
       {
         items: [

@@ -81,4 +81,8 @@ describe("Index file", () => {
     expect(isDefined(All.wrap)).toBe(true);
     expect(isDefined(All.ellipsify)).toBe(true);
   });
+
+  it("should contain all type exports", () => {
+    expect(isDefined(All.cast)).toBe(true);
+  });
 });

@@ -1,12 +1,12 @@
 ---
-title: Utility-js
+title: Utils
 titleTemplate: JavaScript Library
 lang: en-US
 ---
 
-# Utility JS
+# Utils
 
-`Utility.js` is a JavaScript library containing useful helper functions and types which allow the user to write less code, less boilerplates and accelerate development :
+`Utils` is a JavaScript library containing useful helper functions and types which allow the user to write less code, less boilerplates and accelerate development :
 
 [Arrays](./arrays.md)
 
@@ -21,3 +21,5 @@ lang: en-US
 [Object](./object.md)
 
 [String](./string.md)
+
+[Type](./type.md)

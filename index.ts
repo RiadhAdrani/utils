@@ -7,3 +7,4 @@ export * from "./src/array";
 export * from "./src/math";
 export * from "./src/time";
 export * from "./src/color";
+export * from "./src/type";
