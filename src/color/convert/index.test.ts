@@ -1,4 +1,4 @@
-import { it, expect, describe } from "@jest/globals";
+import { it, expect, describe } from "vitest";
 
 import { convertColor, hslToRgb, rgbToHex, rgbToHsl } from ".";
 import { ColorType } from "..";

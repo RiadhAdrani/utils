@@ -1,7 +1,7 @@
-import { ColorType } from "..";
-import { isHexColor } from "../hex";
-import { isHslColor } from "../hsl";
-import { isRgbColor } from "../rgb";
+import { ColorType } from "../index.js";
+import { isHexColor } from "../hex/index.js";
+import { isHslColor } from "../hsl/index.js";
+import { isRgbColor } from "../rgb/index.js";
 
 export const HEX = "hex";
 export const HSL = "hsl";

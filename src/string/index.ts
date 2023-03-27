@@ -1,7 +1,7 @@
-export { default as capitalize } from "./capitalize";
-export { default as isBlank } from "./isBlank";
-export { default as isEmpty } from "./isEmpty";
-export { default as wrap } from "./wrap";
-export { default as ellipsify } from "./ellipsify";
+export { default as capitalize } from "./capitalize/index.js";
+export { default as isBlank } from "./isBlank/index.js";
+export { default as isEmpty } from "./isEmpty/index.js";
+export { default as wrap } from "./wrap/index.js";
+export { default as ellipsify } from "./ellipsify/index.js";
 
 export type StringWithAutoComplete<T> = T | (string & Record<never, never>);

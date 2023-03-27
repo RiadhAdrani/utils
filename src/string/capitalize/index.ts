@@ -1,4 +1,4 @@
-import isBlank from "../isBlank";
+import isBlank from "../isBlank/index.js";
 
 /**
  * capitalize the given string.

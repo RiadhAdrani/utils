@@ -1,6 +1,6 @@
 import * as All from ".";
 
-import { it, expect, describe } from "@jest/globals";
+import { it, expect, describe } from "vitest";
 import { isDefined } from ".";
 
 describe("Index file", () => {

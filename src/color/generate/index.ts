@@ -1,9 +1,9 @@
-import { getColorType } from "../getType";
-import { convertColor } from "../convert";
-import { extractDataFromRGB } from "../rgb";
-import { extractDataFromHSL, hsla } from "../hsl";
-import { Palette, ColorType } from "..";
-import { isInInterval } from "../../math";
+import { getColorType } from "../getType/index.js";
+import { convertColor } from "../convert/index.js";
+import { extractDataFromRGB } from "../rgb/index.js";
+import { extractDataFromHSL, hsla } from "../hsl/index.js";
+import { Palette, ColorType } from "../index.js";
+import { isInInterval } from "../../math/index.js";
 
 function normalizeColorToRgbOrThrow(color: string): string {
   const rgb = convertColor(color, "rgb");

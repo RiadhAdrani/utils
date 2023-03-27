@@ -1,4 +1,4 @@
-import forEachKey from "../forEachKey";
+import forEachKey from "../forEachKey/index.js";
 
 /**
  * modifies the target object by copying keys from the source, excluding the provided ones.

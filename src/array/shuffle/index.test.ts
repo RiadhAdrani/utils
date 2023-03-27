@@ -1,5 +1,5 @@
 import shuffle from ".";
-import { it, expect, describe } from "@jest/globals";
+import { it, expect, describe } from "vitest";
 
 describe("shuffle", () => {
   it("should keep elements", () => {

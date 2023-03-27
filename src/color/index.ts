@@ -1,9 +1,9 @@
-export * from "./convert";
-export * from "./generate";
-export * from "./getType";
-export * from "./hex";
-export * from "./hsl";
-export * from "./rgb";
+export * from "./convert/index.js";
+export * from "./generate/index.js";
+export * from "./getType/index.js";
+export * from "./hex/index.js";
+export * from "./hsl/index.js";
+export * from "./rgb/index.js";
 
 export type ColorType = "hex" | "hsl" | "rgb";
 

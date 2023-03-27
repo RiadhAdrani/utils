@@ -1,4 +1,4 @@
-import areShallowEqual from "./areEqualShallow";
+import areShallowEqual from "./areEqualShallow.js";
 
 /**
  * perform deep comparison of two objects of any type.

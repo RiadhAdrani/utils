@@ -1,4 +1,4 @@
-import hasProperty from "../hasProperty";
+import hasProperty from "../hasProperty/index.js";
 
 /**
  * deeply merge two or more objects.
