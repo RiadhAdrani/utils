@@ -1,4 +1,4 @@
-import { isFunction } from "../../object";
+import { isFunction } from "../../object/index.js";
 
 /**
  * execute a callback for each index of the range specified.
