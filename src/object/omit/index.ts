@@ -1,5 +1,3 @@
-import { StringWithAutoComplete } from "../../string";
-
 export default function omit<T extends Object, K extends keyof T>(
   object: T,
   ...keys: Array<K>

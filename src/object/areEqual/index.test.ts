@@ -1,5 +1,5 @@
 import areEqual from ".";
-import { it, expect, describe } from "@jest/globals";
+import { it, expect, describe } from "vitest";
 
 describe("areEqual", () => {
   const fn = () => {

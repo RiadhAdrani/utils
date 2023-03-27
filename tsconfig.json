@@ -1,11 +1,11 @@
 {
-  "exclude": ["node_modules", "src/**/*.test.ts", "./jest.config.js"],
+  "exclude": ["node_modules", "src/**/*.test.ts", "./jest.config.js", "index.test.ts"],
   "compilerOptions": {
     "target": "es2016",
     "lib": ["es6", "dom"],
-    "module": "commonjs",
+    "module": "Node16",
     "rootDir": ".",
-    "resolveJsonModule": true,
+    "moduleResolution": "node16",
     "allowJs": true,
     "declaration": true,
     "outDir": "build",

@@ -1,4 +1,4 @@
-import { it, expect, describe, jest } from "@jest/globals";
+import { it, expect, describe, vitest } from "vitest";
 import forEachKey from ".";
 
 describe("forEachKey", () => {
@@ -11,7 +11,7 @@ describe("forEachKey", () => {
   });
 
   it("should run with correct values", () => {
-    const callback = jest.fn();
+    const callback = vitest.fn();
 
     const object = { one: 1, two: 2, three: 3, four: 4 };
 

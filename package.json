@@ -1,9 +1,13 @@
 {
   "name": "@riadh-adrani/utils",
-  "version": "0.38.0",
-  "description": "contains utility functions",
-  "types": "build/index.d.ts",
-  "main": "build/index.js",
+  "version": "0.38.2-esm",
+  "type": "module",
+  "description": "utility functions",
+  "types": "./build/index.d.ts",
+  "export": "build/index.js",
+  "engines": {
+    "node": ">=14.16"
+  },
   "files": [
     "build/**/*"
   ],
@@ -18,7 +22,7 @@
     "library"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
     "test-watch": "jest --watch",
     "build": "rm -rf build && tsc",
     "up": "npm run test && npm run build && npm publish",
@@ -35,6 +39,7 @@
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4",
     "vitepress": "^1.0.0-alpha.30",
+    "vitest": "^0.29.7",
     "vue": "^3.2.45"
   }
 }

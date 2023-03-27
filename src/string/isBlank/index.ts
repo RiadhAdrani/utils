@@ -1,4 +1,4 @@
-import isEmpty from "../isEmpty";
+import isEmpty from "../isEmpty/index.js";
 
 /**
  * return if a string is blank or not.

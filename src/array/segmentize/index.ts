@@ -1,4 +1,4 @@
-import { forRange } from "../../iteration";
+import { forRange } from "../../iteration/index.js";
 
 /**
  * divide an array into `segments` (smaller arrays).

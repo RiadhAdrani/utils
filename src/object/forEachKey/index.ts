@@ -1,5 +1,5 @@
-import isFunction from "../isFunction";
-import { isObject } from "../isTrue";
+import isFunction from "../isFunction/index.js";
+import { isObject } from "../isTrue/index.js";
 
 /**
  * Run a callback for each key in a Record.

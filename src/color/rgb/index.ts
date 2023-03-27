@@ -1,5 +1,5 @@
-import { isBlank } from "../../string";
-import { isInInterval } from "../../math";
+import { isBlank } from "../../string/index.js";
+import { isInInterval } from "../../math/index.js";
 
 /**
  * generate an rgba color :

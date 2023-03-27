@@ -1,4 +1,4 @@
-import { isNumber } from "../../object";
+import { isNumber } from "../../object/index.js";
 
 /**
  * generate a random number in a given interval.

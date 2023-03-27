@@ -1,4 +1,4 @@
-import isFunction from "../../object/isFunction";
+import isFunction from "../../object/isFunction/index.js";
 
 /**
  * execute a timeout callback as an asynchronous function.

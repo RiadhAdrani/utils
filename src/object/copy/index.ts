@@ -1,6 +1,6 @@
-import isFalsy from "../isFalsy";
-import isFunction from "../isFunction";
-import isPrimitiveType from "../isPrimitiveType";
+import isFalsy from "../isFalsy/index.js";
+import isFunction from "../isFunction/index.js";
+import isPrimitiveType from "../isPrimitiveType/index.js";
 
 /**
  * Create a new instance from the given object.

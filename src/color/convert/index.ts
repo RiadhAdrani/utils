@@ -1,9 +1,9 @@
 // https://css-tricks.com/converting-color-spaces-in-javascript//
 
-import { ColorType } from "..";
-import { getColorType, HEX, HSL, RGB, UNKNOWN } from "../getType";
-import { extractDataFromHSL } from "../hsl";
-import { extractDataFromRGB } from "../rgb";
+import { ColorType } from "../index.js";
+import { getColorType, HEX, HSL, RGB, UNKNOWN } from "../getType/index.js";
+import { extractDataFromHSL } from "../hsl/index.js";
+import { extractDataFromRGB } from "../rgb/index.js";
 
 /**
  * convert given `H S L` values to `R G B`

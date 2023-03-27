@@ -1,4 +1,4 @@
-import { isNumber, isString } from "../../object";
+import { isNumber, isString } from "../../object/index.js";
 
 /**
  * Trim and append ellipsis to the end of a string
