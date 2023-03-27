@@ -1,10 +1,10 @@
 {
   "name": "@riadh-adrani/utils",
-  "version": "0.38.2-esm",
+  "version": "0.38.3-esm",
   "type": "module",
   "description": "utility functions",
   "types": "./build/index.d.ts",
-  "export": "build/index.js",
+  "exports": "./build/index.js",
   "engines": {
     "node": ">=14.16"
   },

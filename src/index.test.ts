@@ -1,7 +1,7 @@
 import * as All from ".";
+import { isDefined } from ".";
 
 import { it, expect, describe } from "vitest";
-import { isDefined } from ".";
 
 describe("Index file", () => {
   it("should contain all array exports", () => {
