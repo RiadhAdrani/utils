@@ -2,7 +2,7 @@ export { default as areEqual } from "./areEqual/index.js";
 export { default as hasProperty } from "./hasProperty/index.js";
 export { default as isFalsy } from "./isFalsy/index.js";
 export { default as isFunction } from "./isFunction/index.js";
-export { default as isPrimitiveType } from "./isPrimitiveType/index.js";
+export { default as isPrimitive } from "./isPrimitiveType/index.js";
 export { default as merge } from "./merge/index.js";
 export { default as verify } from "./verify/index.js";
 export { default as copy } from "./copy/index.js";

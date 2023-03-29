@@ -57,7 +57,7 @@ describe("Index file", () => {
     expect(isDefined(All.hasProperty)).toBe(true);
     expect(isDefined(All.isFalsy)).toBe(true);
     expect(isDefined(All.isFunction)).toBe(true);
-    expect(isDefined(All.isPrimitiveType)).toBe(true);
+    expect(isDefined(All.isPrimitive)).toBe(true);
     expect(isDefined(All.isTrue)).toBe(true);
     expect(isDefined(All.isString)).toBe(true);
     expect(isDefined(All.isNull)).toBe(true);
