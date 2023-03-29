@@ -4,7 +4,7 @@
  * @param start starting point. 0 by default.
  * @throw when start > end.
  */
-export default function range(end: number, start = 0): Array<number> {
+export default function range(start: number, end: number): Array<number> {
   if (typeof end != "number" || typeof start != "number") {
     throw "(end) or (start) is/are not of type number.";
   }

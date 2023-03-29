@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: yarn install --frozen-lockfile
-      - run: yarn test --run
+      - run: yarn test
 
   deploy:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.

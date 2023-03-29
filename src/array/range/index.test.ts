@@ -6,12 +6,12 @@ describe("range", () => {
     [0, 0, []],
     [2, 0, [0, 1]],
     [10, 5, [5, 6, 7, 8, 9]],
-  ])("should create the correct array of numbers : %s %s => %s", (end, start, expected) => {
+  ])("should create the correct array of numbers : %s %s => %s", (start, end, expected) => {
     expect(range(end, start)).toStrictEqual(expected);
   });
 
   it("should throw an error", () => {
-    const fn = () => range(5, 10);
+    const fn = () => range(10, 5);
     expect(fn).toThrow();
   });
 

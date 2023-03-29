@@ -28,11 +28,11 @@ function isArrayOf<T>(array: Array<T>, condition: string | ((item: T) => boolean
 creates an array of numbers in the given interval.
 
 ```ts
-function range(end: number, start?: number): Array<number>;
+function range(start: number, end: number): Array<number>;
 ```
 
+- _`start`_ : starting number
 - _`end`_ : ending number.
-- _`start`_ : starting number, `0` by default
 
 > _throws when one or both arguments are not of type `number`._
 
