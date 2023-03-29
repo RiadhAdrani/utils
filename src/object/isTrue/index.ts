@@ -63,11 +63,28 @@ export function isNull(o: unknown): boolean {
 }
 
 /**
- * checks if the object provided is defined, different of `undefined`.
+ * checks if the object provided is defined, different of `undefined` and `null`.
  *
- * In Javascript land, `null` is considered a defined object.
  * @param o
  */
 export function isDefined(o: unknown): boolean {
-  return isTrue(typeof o !== "undefined");
+  return isTrue(!isNull(o) && !isUndefined(o));
+}
+
+/**
+ * checks if the object provided is `undefined`.
+ *
+ * @param o
+ */
+export function isUndefined(o: unknown): boolean {
+  return isTrue(typeof o === "undefined");
+}
+
+/**
+ * checks if the object provided is boolean.
+ *
+ * @param o
+ */
+export function isBoolean(o: unknown): boolean {
+  return isTrue(typeof o === "boolean");
 }

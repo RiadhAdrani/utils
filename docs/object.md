@@ -173,10 +173,30 @@ function isNull(o: unknown): boolean;
 
 ## isDefined()
 
-checks if the object provided is different than `undefined`.
+checks if the object provided is different than `undefined` and `null`.
 
 ```ts
 function isDefined(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isUndefined()
+
+checks if the object provided is equal to `undefined`.
+
+```ts
+function isUndefined(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isBoolean()
+
+checks if the object provided is of type `boolean`.
+
+```ts
+function isBoolean(o: unknown): boolean;
 ```
 
 - _`o`_ : any object.
