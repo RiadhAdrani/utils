@@ -3,7 +3,7 @@
  * @param object target object
  * @param property property name
  */
-export default function hasProperty<T>(object: T, property: string): boolean {
+export default function hasProperty(object: unknown, property: string): boolean {
   if (
     ["string", "number", "boolean", "bigint", "undefined", "null", "symbol"].includes(typeof object)
   )
