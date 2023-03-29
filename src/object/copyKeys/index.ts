@@ -1,3 +1,4 @@
+import { StringWithAutoComplete } from "../../index.js";
 import forEachKey from "../forEachKey/index.js";
 
 /**
@@ -6,10 +7,10 @@ import forEachKey from "../forEachKey/index.js";
  * @param target
  * @param exclude
  */
-export default function copyKeys<F extends Object, T extends Object>(
+export default function copyKeys<F extends object, T extends object>(
   source: F,
   target: T,
-  ...exclude: Array<keyof F>
+  ...exclude: Array<StringWithAutoComplete<keyof F>>
 ): void {
   forEachKey((key, value) => {
     if (!exclude.includes(key as keyof F)) {
