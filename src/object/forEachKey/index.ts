@@ -6,7 +6,7 @@ import { isObject } from "../isTrue/index.js";
  * @param callback to be executed.
  * @param object source.
  */
-export default function <T extends Object>(
+export default function <T extends object>(
   callback: (key: keyof T, value: T[keyof T], index: number) => void,
   object: T
 ) {
