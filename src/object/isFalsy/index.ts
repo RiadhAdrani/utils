@@ -6,7 +6,7 @@
  * @param value
  * @param additionalFalsyList
  */
-export default function isFalsy<T>(value: T, additionalFalsyList?: Array<unknown>) {
+export default function isFalsy(value: unknown, additionalFalsyList?: Array<unknown>) {
   const list = Array.isArray(additionalFalsyList) ? additionalFalsyList : [];
 
   list.push(false, 0, -0, "", null, undefined, NaN);
