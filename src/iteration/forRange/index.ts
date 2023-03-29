@@ -1,4 +1,4 @@
-import { isFunction } from "../../object/index.js";
+import { isFunction, isNumber } from "../../object/index.js";
 
 /**
  * execute a callback for each index of the range specified.
@@ -11,17 +11,17 @@ import { isFunction } from "../../object/index.js";
  */
 export default function forRange<T = unknown>(
   callback: (index: number) => void | T,
+  start: number,
   end: number,
-  start = 0,
   step = 1
 ): T | undefined {
   if (!isFunction(callback)) throw "(callback) is not a function.";
 
-  if (typeof end != "number") throw "(end) is not a number.";
+  if (!isNumber(end)) throw "(end) is not a number.";
 
-  if (typeof start != "number") throw "(start) is not a number.";
+  if (!isNumber(start)) throw "(start) is not a number.";
 
-  if (typeof step != "number") throw "(step) is not a number.";
+  if (!isNumber(step)) throw "(step) is not a number.";
 
   for (let i = start; i < end; i = i + step) {
     const res = callback(i);

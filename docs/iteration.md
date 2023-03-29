@@ -11,15 +11,15 @@ returning a `non-undefined` value will cause the loop to break.
 ```ts
 function forRange<T = unknown>(
   callback: (index: number) => void | T,
+  start: number,
   end: number,
-  start?: number,
   step?: number
 ): T | undefined;
 ```
 
 - _`callback`_ : callback to be executed.
-- _`end`_ : ending number, non-inclusive.
 - _`start`_ : starting number, `0` by default.
+- _`end`_ : ending number, non-inclusive.
 - _`step`_ : stepping number, `1` by default.
 
 > _throws when callback is not a function._

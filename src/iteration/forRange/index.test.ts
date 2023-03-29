@@ -4,9 +4,9 @@ import forRange from ".";
 
 describe("forRange", () => {
   it.each([
-    [() => 1, 5, 0, null],
-    [() => 1, 5, null, 1],
-    [() => 1, null, 0, 1],
+    [() => 1, 0, 5, null],
+    [() => 1, null, 5, 1],
+    [() => 1, 0, null, 1],
     [null, 5, 0, 1],
   ])("should throw", (callback, end, start, step) => {
     expect(() =>
@@ -36,7 +36,7 @@ describe("forRange", () => {
     ],
   ])(
     "should return the correct value : '%s' '%s' '%s' '%s' ",
-    (callback, end, start, step, expected) => {
+    (callback, start, end, step, expected) => {
       expect(
         forRange(callback as () => void, end as number, start as number, step as number)
       ).toStrictEqual(expected);
