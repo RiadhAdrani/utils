@@ -4,11 +4,11 @@
  * @param object source
  * @returns an object with `key` and `value` as keys.
  */
-export default function <T extends Object>(
+export default function <T extends object>(
   callback: (key: keyof T, value: T[keyof T]) => boolean,
   object: T
 ): { key: keyof T; value: T[keyof T] } | undefined {
-  for (let k in object) {
+  for (const k in object) {
     const res = callback(k, object[k]);
 
     if (res) {
