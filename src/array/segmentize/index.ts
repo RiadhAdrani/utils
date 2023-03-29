@@ -12,8 +12,8 @@ export default function <T>(array: Array<T>, segmentLength: number): Array<Array
     (index) => {
       output.push(array.slice(index, index + segmentLength));
     },
-    array.length,
     0,
+    array.length,
     segmentLength
   );
 
