@@ -21,7 +21,7 @@ type Condition = boolean | (() => boolean);
 perform deep comparison of two objects of any type.
 
 ```ts
-function areEquals<T, K>(obj1: T, obj2: K, depth?: number): boolean;
+function areEquals(obj1: unknown, obj2: unknown, depth?: number): boolean;
 ```
 
 - _`obj1`_ : first object.
