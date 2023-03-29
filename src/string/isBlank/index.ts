@@ -1,3 +1,4 @@
+import { isString } from "../../index.js";
 import isEmpty from "../isEmpty/index.js";
 
 /**
@@ -7,5 +8,5 @@ import isEmpty from "../isEmpty/index.js";
  * @param value
  */
 export default function isBlank(value: string): boolean {
-  return typeof value !== "string" || isEmpty(value.trim());
+  return !isString(value) || isEmpty(value.trim());
 }
