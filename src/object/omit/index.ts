@@ -1,6 +1,8 @@
-export default function omit<T extends Object, K extends keyof T>(
+import { StringWithAutoComplete } from "../../index.js";
+
+export default function omit<T extends object, K extends keyof T>(
   object: T,
-  ...keys: Array<K>
+  ...keys: Array<StringWithAutoComplete<keyof T | K>>
 ): Omit<T, K> {
   const out = { ...object } as T;
 
