@@ -1,6 +1,6 @@
 {
   "name": "@riadh-adrani/utils",
-  "version": "0.38.3-esm",
+  "version": "0.38.3",
   "type": "module",
   "description": "utility functions",
   "types": "./build/index.d.ts",
