@@ -30,7 +30,7 @@ function areEquals(obj1: unknown, obj2: unknown, depth?: number): boolean;
 
 ## copy()
 
-create a copy from the given object. Works only with plain JavaScript objects.
+create a deep copy from the given object. Works only with plain JavaScript objects.
 
 ```ts
 function copy<T>(source: T): T;

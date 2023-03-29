@@ -3,7 +3,7 @@ import isFunction from "../isFunction/index.js";
 import isPrimitiveType from "../isPrimitiveType/index.js";
 
 /**
- * Create a new instance from the given object.
+ * Create a new deep copy from the given object.
  * @param source Source object.
  */
 export default function copy<T>(source: T): T {
