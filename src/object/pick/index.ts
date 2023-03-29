@@ -3,9 +3,9 @@
  * @param object source.
  * @param keys keys to preserve
  */
-export default function pick<T extends Object, K extends keyof T>(
+export default function pick<T extends object, K extends keyof T>(
   object: T,
-  ...keys: Array<K>
+  ...keys: Array<keyof T | K>
 ): Pick<T, K> {
   const out = {} as Pick<T, K>;
 
