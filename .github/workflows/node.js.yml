@@ -9,7 +9,7 @@ permissions:
   contents: write
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:

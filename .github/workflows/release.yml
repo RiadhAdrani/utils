@@ -20,6 +20,22 @@ jobs:
           registry-url: https://registry.npmjs.org/
           node-version: "14"
 
+      # Install deps
+      - name: Deps
+        run: yarn install --frozen-lockfile
+
+      # Run source code test
+      - name: Test
+        run: yarn test
+
+      # Build Library
+      - name: Build
+        run: yarn build
+
+      # Test Build
+      - name: Build Test
+        run: yarn test
+
       # Configure Git
       - name: Git configuration
         run: |
