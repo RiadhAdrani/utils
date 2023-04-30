@@ -1,4 +1,4 @@
-<h1 align="center">Utility-js</h1>
+<h1 align="center">Utils</h1>
 <p align="center">
 <i>Javascript utility functions and types</i>
 <p align=center>
