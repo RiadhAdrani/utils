@@ -16,6 +16,21 @@ type Verifier = boolean | (() => boolean | void);
 type Condition = boolean | (() => boolean);
 ```
 
+#### `Type`
+
+```ts
+type Type =
+  | "undefined"
+  | "null"
+  | "boolean"
+  | "number"
+  | "bigint"
+  | "string"
+  | "symbol"
+  | "object"
+  | "array";
+```
+
 ## areEqual()
 
 perform deep comparison of two objects of any type.
@@ -197,6 +212,40 @@ checks if the object provided is of type `boolean`.
 
 ```ts
 function isBoolean(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isBigint()
+
+checks if the object provided is of type `bigint`.
+
+```ts
+function isBigint(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## isSymbol()
+
+checks if the object provided is of type `symbol`.
+
+```ts
+function isSymbol(o: unknown): boolean;
+```
+
+- _`o`_ : any object.
+
+## getType()
+
+returns the `type` of the object.
+
+This fucntion differntiate between `object`, `array` and `null`.
+
+> check [Type](#types) for the full list of values.
+
+```ts
+function getType(o: unknown): Type;
 ```
 
 - _`o`_ : any object.
