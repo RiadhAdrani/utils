@@ -88,3 +88,19 @@ export function isUndefined(o: unknown): boolean {
 export function isBoolean(o: unknown): boolean {
   return isTrue(typeof o === "boolean");
 }
+
+/**
+ * checks if the object provided is a bigint
+ * @param o
+ */
+export function isBigint(o: unknown): boolean {
+  return typeof o === "bigint";
+}
+
+/**
+ * checks if the object provided is a symbol
+ * @param o
+ */
+export function isSymbol(o: unknown): boolean {
+  return typeof o === "symbol";
+}

@@ -39,6 +39,38 @@ describe("merge", () => {
       [{ data: { age: 1, others: {} } }, { data: { others: undefined } }],
       { data: { age: 1, others: undefined } },
     ],
+    [
+      [
+        [1, 2, 3],
+        [3, 2, 1],
+      ],
+      [3, 2, 1],
+    ],
+    [
+      [
+        [1, 2],
+        [3, 2, 1],
+      ],
+      [3, 2, 1],
+    ],
+    [
+      [
+        [{}, 2],
+        [3, 2, 1],
+      ],
+      [3, 2, 1],
+    ],
+    [
+      [
+        [{ hello: undefined }, 2],
+        [{ hello: "world" }, 2, 1],
+      ],
+      [{ hello: "world" }, 2, 1],
+    ],
+    [
+      [{}, [1, 2]],
+      [1, 2],
+    ],
   ])("should merge one or more objects", (objects, expected) => {
     expect(merge(...objects)).toStrictEqual(expected);
   });
