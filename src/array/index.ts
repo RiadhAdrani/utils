@@ -1,3 +1,4 @@
+export { default as ReactiveArray } from "./reactive/ReactiveArray.js";
 export { default as isArrayOf } from "./isArrayOf/index.js";
 export { default as range } from "./range/index.js";
 export { default as shuffle } from "./shuffle/index.js";
