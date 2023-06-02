@@ -338,3 +338,14 @@ function hasCircularDependency(o: unknown): boolean;
 ```
 
 - _`o`_ : object to be tested.
+
+## createReactive()
+
+creates a proxy reactive object,that will trigger the `onValueChanged` when an internal value have changed.
+
+```ts
+function createReactive<T extends object>(object: T, onValueChanged: Callback): T;
+```
+
+- _`object`_ : target object
+- _`onValueChanged`_ : callback
