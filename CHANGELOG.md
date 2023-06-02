@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 0.41.0 - 2023-06-02
+
 ## 0.40.0 - 2023-05-28
 ### Added
 - `ReactiveArray` allows the use of a callback when the array structure changes. The `onChanged` handler is not working with `Array.prototype.splice` at the moment.
