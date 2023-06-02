@@ -316,3 +316,25 @@ function findKey<T extends Object>(
 
 - _`callback`_ : predicate to be executed for each key of the object..
 - _`object`_ : source.
+
+## keyHasCircularDependency()
+
+detects if the given key have a circular dependency within.
+
+```ts
+function hasCircularDependency<T extends object>(o: T, key: keyof T, visited: Set<unkown>): boolean;
+```
+
+- _`o`_ : object
+- _`key`_ : specific key to be tested
+- _`visited`_ : a set of additional object that will be tested against each value within the specific key, empty by default.
+
+## haveCircularDependency()
+
+detects if an object/array have a circular dependency within its structure.
+
+```ts
+function hasCircularDependency(o: unknown): boolean;
+```
+
+- _`o`_ : object to be tested.

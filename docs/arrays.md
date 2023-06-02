@@ -60,3 +60,23 @@ function shuffle<T>(input: T[]): T[];
 ```
 
 - _`input`_ : source array.
+
+## ReactiveArray
+
+Create a new array object with an `onChanged` hook that will be executed when the internal structure of the array is changed by the standard methods: `push`, `pop`, `shift`, `unshift`, `reverse`, `sort`, `fill`, `copyWithin`.
+
+`class`
+
+```ts
+class ReactiveArray<T> extends Array<T>;
+```
+
+`constructor`
+
+```ts
+new ReactiveArray<T>(items: Array<T>, onChanged: () => void);
+```
+
+:::warning
+The handler is not implemented for the `Array.prototype.splice` method.
+:::

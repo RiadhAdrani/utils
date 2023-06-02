@@ -1,7 +1,7 @@
-import { Callback, areEqual, isNumber } from "../../index.js";
+import { Callback, areEqual } from "../../index.js";
 
 export default class ReactiveArray<T> extends Array<T> {
-  onChanged: Callback = () => {};
+  onChanged: Callback = () => 0;
 
   constructor(items: Array<T>, onChanged: () => void) {
     super(...items);

@@ -35,13 +35,13 @@ export const keyHasCircularDependency = <T extends object>(
  * detects if an object/array have a circular dependency within its structure.
  * @param o object
  */
-export const hasCircularDependency = (o: object): boolean => {
+export const hasCircularDependency = (o: unknown): boolean => {
   if (!["object", "array"].includes(getType(o))) {
     return false;
   }
 
-  for (const key in o) {
-    if (keyHasCircularDependency(o, key as keyof object, new Set([o]))) {
+  for (const key in o as object) {
+    if (keyHasCircularDependency(o as object, key as keyof object, new Set([o]))) {
       return true;
     }
   }

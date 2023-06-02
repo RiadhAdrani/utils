@@ -12,6 +12,7 @@ export { default as omit } from "./omit/index.js";
 export { default as copyKeys } from "./copyKeys/index.js";
 export { default as findKey } from "./findKey/index.js";
 export { default as getType } from "./getType/index.js";
+export * from "./haveCircularDependency/index.js";
 
 export * from "./isTrue/index.js";
 export * from "./getType/index.js";

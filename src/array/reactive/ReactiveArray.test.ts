@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, vitest } from "vitest";
 import ReactiveArray from "./ReactiveArray.js";
 
 describe("ReactiveArray", () => {
-  let handler = vitest.fn(() => {});
+  let handler = vitest.fn(() => 0);
   let array = new ReactiveArray([1, 2, 3], handler);
 
   beforeEach(() => {
