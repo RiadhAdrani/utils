@@ -6,7 +6,7 @@ layout: home
 hero:
   name: Utils
   text: Build more with less
-  tagline: Welcome to Utils - Your comprehensive JavaScript ttility library
+  tagline: Welcome to Utils - Your comprehensive JavaScript utility library
   actions:
     - theme: brand
       text: Start browsing
