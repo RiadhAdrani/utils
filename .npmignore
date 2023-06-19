@@ -10,3 +10,5 @@ src/**/*.test.ts
 .gitignore
 .jest.config.js
 tsconfig.json
+tsconfig.cjs.json
+tsconfig.esm.json

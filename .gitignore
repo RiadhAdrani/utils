@@ -2,4 +2,6 @@ node_modules
 .vscode
 build
 dist
+cjs
+esm
 ./docs/.vitepress/dist

@@ -4,13 +4,17 @@
   "type": "module",
   "description": "utility functions",
   "types": "./build/index.d.ts",
-  "exports": "./build/index.js",
   "engines": {
     "node": ">=16.0.0"
   },
   "files": [
-    "build/**/*"
+    "cjs/**/*",
+    "esm/**/*"
   ],
+  "exports": {
+    "import": "./esm/index.js",
+    "require": "./cjs/index.js"
+  },
   "author": "riadh-adrani",
   "license": "MIT",
   "keywords": [
@@ -24,7 +28,9 @@
   "scripts": {
     "test": "vitest",
     "test-watch": "jest --watch",
-    "build": "rm -rf build && tsc",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "rm -rf cjs && tsc --project tsconfig.cjs.json",
+    "build:esm": "rm -rf esm && tsc --project tsconfig.esm.json",
     "up": "npm run test && npm run build && npm publish",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
