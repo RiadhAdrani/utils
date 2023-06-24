@@ -80,3 +80,24 @@ new ReactiveArray<T>(items: Array<T>, onChanged: () => void);
 :::warning
 The handler is not implemented for the `Array.prototype.splice` method.
 :::
+
+## reactiveArray()
+
+creates a new `ReactiveArray`.
+
+```ts
+function reactiveArray<T>(array: Array<T>, onChange: () => void): ReactiveArray<T>;
+```
+
+- _`array`_ : source array.
+- _`onChange`_ : change handler
+
+## isReactiveArray()
+
+checks if the given object is an instance of `ReactiveArray`.
+
+```ts
+function isReactiveArray(o: unknown): boolean;
+```
+
+- _`o`_ : object to check.

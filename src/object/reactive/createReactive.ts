@@ -1,5 +1,5 @@
-import { Callback, ReactiveArray, cast } from "../../index.js";
-import { forEachKey, isArray, isObject } from "../index.js";
+import { Callback, ReactiveArray, cast } from '../../index.js';
+import { forEachKey, isArray, isObject } from '../index.js';
 
 /**
  * creates a proxy reactive object,

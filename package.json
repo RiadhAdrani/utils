@@ -8,13 +8,13 @@
     "node": ">=16.0.0"
   },
   "files": [
-    "cjs/**/*",
-    "esm/**/*"
+    "build/**/*"
   ],
-  "exports": {
-    "import": "./esm/index.js",
-    "require": "./cjs/index.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RiadhAdrani/utility-js"
   },
+  "exports": "./build/index.js",
   "author": "riadh-adrani",
   "license": "MIT",
   "keywords": [
@@ -28,7 +28,7 @@
   "scripts": {
     "test": "vitest",
     "test-watch": "jest --watch",
-    "build": "yarn build:cjs && yarn build:esm",
+    "build": "rm -rf build && tsc",
     "build:cjs": "rm -rf cjs && tsc --project tsconfig.cjs.json",
     "build:esm": "rm -rf esm && tsc --project tsconfig.esm.json",
     "up": "npm run test && npm run build && npm publish",

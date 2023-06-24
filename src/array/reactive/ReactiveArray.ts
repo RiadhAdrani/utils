@@ -1,9 +1,13 @@
-import { Callback, areEqual } from "../../index.js";
+import { Callback, areEqual, isArray } from '../../index.js';
 
 export default class ReactiveArray<T> extends Array<T> {
   onChanged: Callback = () => 0;
 
   constructor(items: Array<T>, onChanged: () => void) {
+    if (!isArray(items)) {
+      throw `[Utils:ReactiveArray] expected Array but got ${typeof items}`;
+    }
+
     super(...items);
 
     this.onChanged = onChanged;
@@ -113,3 +117,21 @@ export default class ReactiveArray<T> extends Array<T> {
     return updated;
   }
 }
+
+/**
+ * checks if the provided object is instance of `ReactiveArray`
+ * @param o object
+ */
+export const isReactiveArray = (o: unknown): boolean => {
+  return o instanceof ReactiveArray;
+};
+
+/**
+ * create a new reactive array instance
+ * @param array array to transform
+ * @param onChanged change handler
+ */
+export const reactiveArray = <T = unknown>(
+  array: Array<T>,
+  onChanged: () => void
+): ReactiveArray<T> => new ReactiveArray(array, onChanged);
