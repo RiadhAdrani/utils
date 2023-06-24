@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## 0.42.2 - 2023-06-24
+
 ## 0.42.1 - 2023-06-19
 ### Added
 - add `cjs` support.
