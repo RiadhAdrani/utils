@@ -448,6 +448,11 @@
   resolved "https://registry.yarnpkg.com/@riadh-adrani/math-utils/-/math-utils-1.0.2.tgz#4ea9d460b46b9d71a39253edf7b34a83ec3856e7"
   integrity sha512-DUUEVzCGV9pX3L6IX+owDI0Y75zx9c6rRnincu+CjWh77J9DPuS6Ags3iaLDxnHy8/BkFHkhq6fATuHGbFlkuw==
 
+"@riadh-adrani/obj-utils@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@riadh-adrani/obj-utils/-/obj-utils-1.0.3.tgz#685eec082db88068e2bb071c241bb13028c82f25"
+  integrity sha512-RpSldaAol5kbZ/+RQJTzcF7pC2Bd5kOvsNRxWO1vFBbAwA4Y1LQQBgTHv19LUC1h4Ul1y2o71DOQeSHScR4OeA==
+
 "@riadh-adrani/str-utils@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@riadh-adrani/str-utils/-/str-utils-1.0.3.tgz#d5dc47351079be4758ca507bc64e650a41f23120"

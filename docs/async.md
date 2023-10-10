@@ -1,5 +1,9 @@
 # Async
 
+> individual package can be found here [`@riadh-adrani/async-utils`](https://github.com/RiadhAdrani/async-utils).
+
+<br/>
+
 [[toc]]
 
 ## runAfter()
@@ -18,3 +22,15 @@ function runAfter<T>(time: number, callback () => T): Promise<T | void>;
 > _throws when time is invalid._
 
 > _throws when callback is not a function._
+
+## wait()
+
+execute an asynchronous timeout.
+
+Uses `setTimeout`.
+
+```ts
+function wait<T>(time: number): Promise<void>;
+```
+
+- _`time`_ : delay in milliseconds.

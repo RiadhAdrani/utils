@@ -1,51 +1,51 @@
-import type { UserConfig } from "vitepress";
+import type { UserConfig } from 'vitepress';
 
 const config: UserConfig = {
   themeConfig: {
-    siteTitle: "Utils",
+    siteTitle: 'Utils',
     nav: [
       {
-        text: "Array",
-        link: "/arrays",
-        activeMatch: "/arrays",
+        text: 'Array',
+        link: '/arrays',
+        activeMatch: '/arrays',
       },
       {
-        text: "Async",
-        link: "/async",
-        activeMatch: "/async",
+        text: 'Async',
+        link: '/async',
+        activeMatch: '/async',
       },
       {
-        text: "Colors",
-        link: "/colors",
-        activeMatch: "/colors",
+        text: 'Colors',
+        link: '/colors',
+        activeMatch: '/colors',
       },
       {
-        text: "Iteration",
-        link: "/iteration",
-        activeMatch: "/iterations",
+        text: 'Math',
+        link: '/math',
+        activeMatch: '/math',
       },
       {
-        text: "Math",
-        link: "/math",
-        activeMatch: "/math",
+        text: 'Object',
+        link: '/object',
+        activeMatch: '/object',
       },
       {
-        text: "Object",
-        link: "/object",
-        activeMatch: "/object",
+        text: 'String',
+        link: '/string',
+        activeMatch: '/string',
       },
       {
-        text: "String",
-        link: "/string",
-        activeMatch: "/string",
+        text: 'Types',
+        link: '/type',
+        activeMatch: '/type',
       },
     ],
     footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2022-present Riadh Adrani",
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present Riadh Adrani',
     },
   },
-  base: "/utility-js/",
+  base: '/utils/',
 };
 
 export default config;

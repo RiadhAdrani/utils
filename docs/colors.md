@@ -1,13 +1,17 @@
 # Colors
 
-[[toc]]
+> individual package can be found here [`@riadh-adrani/color-utils`](https://github.com/RiadhAdrani/color-utils).
+
+<br/>
+
+> [[toc]]
 
 ## Types
 
 #### `ColorTypes`
 
 ```ts
-type ColorType = "hex" | "hsl" | "rgb";
+type ColorType = 'hex' | 'hsl' | 'rgb';
 ```
 
 #### `Palette`
@@ -34,7 +38,7 @@ type Palette = {
 resolve the correct type of the color.
 
 ```ts
-function getColorType(color: string): ColorTypes | "unknown";
+function getColorType(color: string): ColorTypes | 'unknown';
 ```
 
 - _`color`_ : target color.

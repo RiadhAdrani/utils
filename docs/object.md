@@ -1,34 +1,24 @@
 # Object
 
+> individual package can be found here [`@riadh-adrani/obj-utils`](https://github.com/RiadhAdrani/obj-utils).
+
+<br/>
+
 [[toc]]
 
-## Types
-
-#### `Verifier`
-
-```ts
-type Verifier = boolean | (() => boolean | void);
-```
-
-#### `Condition`
-
-```ts
-type Condition = boolean | (() => boolean);
-```
-
-#### `Type`
+### `Types`
 
 ```ts
 type Type =
-  | "undefined"
-  | "null"
-  | "boolean"
-  | "number"
-  | "bigint"
-  | "string"
-  | "symbol"
-  | "object"
-  | "array";
+  | 'undefined'
+  | 'null'
+  | 'boolean'
+  | 'number'
+  | 'bigint'
+  | 'string'
+  | 'symbol'
+  | 'object'
+  | 'array';
 ```
 
 ## areEqual()
@@ -87,14 +77,14 @@ function isFunction(object: unknown): boolean;
 
 - _`object`_ : source object.
 
-## isPrimitiveType()
+## isPrimitive()
 
 checks if an object is of a primitive type.
 
 JavaScript primitive types : `string`, `number`, `bigint`, `boolean`, `undefined`, `symbol` and `null.`
 
 ```ts
-function isPrimitiveType<T>(object: T): boolean;
+function isPrimitive<T>(object: T): boolean;
 ```
 
 - _`object`_ : source object.
@@ -108,33 +98,6 @@ function merge<T = Record<string, unknown>>(...objects: Record<string, unknown>[
 ```
 
 - _`...objects`_ : objects to be merged.
-
-## verify()
-
-evaluate the list of statements as long as they are not `false`, returning true at the end, or break when a condition fail.
-
-a `verifier` could be a boolean or a function returning a boolean.
-
-note that returning any other value than `false` will not cause the verification to exit.
-
-```ts
-function verify(...verifiers: Verifier[]): boolean;
-```
-
-- _`...verifiers`_ : statements/conditions.
-
-## isTrue()
-
-checks if the condition provided is true.
-
-```ts
-function isTrue(condition: Condition): boolean;
-```
-
-- _`condition`_ : testable condition.
-
-> throws when the condition is neither a `boolean` or a `function`.
-> throws when the return type of the condition is not `boolean`.
 
 ## isNumber()
 
@@ -182,16 +145,6 @@ checks if the object provided is null.
 
 ```ts
 function isNull(o: unknown): boolean;
-```
-
-- _`o`_ : any object.
-
-## isDefined()
-
-checks if the object provided is different than `undefined` and `null`.
-
-```ts
-function isDefined(o: unknown): boolean;
 ```
 
 - _`o`_ : any object.
@@ -285,38 +238,6 @@ function omit<T extends Object, K extends keyof T>(object: T, ...keys: Array<K>)
 - _`object`_ : source object.
 - _`...keys`_ : object's key to omit
 
-## copyKeys()
-
-modifies the target object by copying keys from the source, excluding the provided ones.
-
-```ts
-function copyKeys<F extends Object, T extends Object>(
-  source: F,
-  target: T,
-  ...exclude: Array<keyof F>
-): void;
-```
-
-- _`source`_ : source object.
-- _`target`_ : target object.
-- _`...exclude`_ : object's key to exclude.
-
-## findKey()
-
-find a key value pair from an object satisfying the given callback. returns `undefined` otherwise.
-
-returns an object with `key` and `value` as keys.
-
-```ts
-function findKey<T extends Object>(
-  callback: (key: keyof T, value: T[keyof T]) => boolean,
-  object: T
-): { key: keyof T; value: T[keyof T] } | undefined;
-```
-
-- _`callback`_ : predicate to be executed for each key of the object..
-- _`object`_ : source.
-
 ## keyHasCircularDependency()
 
 detects if the given key have a circular dependency within.
@@ -328,24 +249,3 @@ function hasCircularDependency<T extends object>(o: T, key: keyof T, visited: Se
 - _`o`_ : object
 - _`key`_ : specific key to be tested
 - _`visited`_ : a set of additional object that will be tested against each value within the specific key, empty by default.
-
-## haveCircularDependency()
-
-detects if an object/array have a circular dependency within its structure.
-
-```ts
-function hasCircularDependency(o: unknown): boolean;
-```
-
-- _`o`_ : object to be tested.
-
-## createReactive()
-
-creates a proxy reactive object,that will trigger the `onValueChanged` when an internal value have changed.
-
-```ts
-function createReactive<T extends object>(object: T, onValueChanged: Callback): T;
-```
-
-- _`object`_ : target object
-- _`onValueChanged`_ : callback

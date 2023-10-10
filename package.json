@@ -51,6 +51,7 @@
     "@riadh-adrani/async-utils": "^1.0.2",
     "@riadh-adrani/color-utils": "^1.0.2",
     "@riadh-adrani/math-utils": "^1.0.2",
+    "@riadh-adrani/obj-utils": "^1.0.3",
     "@riadh-adrani/str-utils": "^1.0.3",
     "@riadh-adrani/type-utils": "^1.1.0"
   }

@@ -1,5 +1,9 @@
 # String
 
+> individual package can be found here [`@riadh-adrani/str-utils`](https://github.com/RiadhAdrani/str-utils).
+
+<br/>
+
 [[toc]]
 
 ## capitalize()
@@ -22,7 +26,15 @@ checks if a string have no characters.
 function isEmpty(value: string): boolean;
 ```
 
-- _`value`_ : string.
+## isString()
+
+checks if an object is a string.
+
+```ts
+function isString(o: unknown): boolean;
+```
+
+- _`o`_ : object.
 
 ## isBlank()
 
@@ -59,5 +71,4 @@ function ellipsify(text: string, max: number): string;
 - _`text`_ : input string.
 - _`max`_ : maximum length.
 
-> _throws when `text` is not a string._
-> _throws when `max` is not a number._
+> _throws when `text` is not a string._ > _throws when `max` is not a number._
