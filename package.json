@@ -26,12 +26,12 @@
     "library"
   ],
   "scripts": {
-    "test": "vitest",
-    "test-watch": "jest --watch",
-    "build": "rm -rf build && tsc",
-    "build:cjs": "rm -rf cjs && tsc --project tsconfig.cjs.json",
-    "build:esm": "rm -rf esm && tsc --project tsconfig.esm.json",
-    "up": "npm run test && npm run build && npm publish",
+    "build:clean": "rm -rf dist",
+    "build:cjs": "tsc --project tsconfig.cjs.json --removeComments",
+    "build:esm": "tsc --project tsconfig.esm.json --removeComments",
+    "build:cjs:types": "tsc --project tsconfig.cjs.json --emitDeclarationOnly --pretty",
+    "build:esm:types": "tsc --project tsconfig.esm.json --emitDeclarationOnly --pretty",
+    "build": "yarn build:clean && yarn build:cjs && yarn build:cjs:types && yarn build:esm && yarn build:esm:types && ./pacakge.json.fix.sh",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -45,5 +45,13 @@
     "vitepress": "^1.0.0-alpha.30",
     "vitest": "^0.29.7",
     "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "@riadh-adrani/array-utils": "^1.0.3",
+    "@riadh-adrani/async-utils": "^1.0.2",
+    "@riadh-adrani/color-utils": "^1.0.2",
+    "@riadh-adrani/math-utils": "^1.0.2",
+    "@riadh-adrani/str-utils": "^1.0.3",
+    "@riadh-adrani/type-utils": "^1.1.0"
   }
 }

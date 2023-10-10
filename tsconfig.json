@@ -1,25 +1,23 @@
 {
-  "exclude": [
-    "node_modules",
-    "src/**/*.test.ts",
-    "./jest.config.js",
-    "src/index.test.ts",
-    "cjs",
-    "esm"
-  ],
   "compilerOptions": {
-    "target": "es2016",
-    "lib": ["es6", "dom"],
-    "module": "Node16",
-    "rootDir": ".",
-    "moduleResolution": "node16",
-    "allowJs": true,
-    "declaration": true,
-    "outDir": "build",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "baseUrl": "src",
+    "useDefineForClassFields": true,
+    "module": "NodeNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "NodeNext",
+    "outDir": "dist",
     "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  }
+    "declaration": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "types": []
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

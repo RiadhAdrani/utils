@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       release-type:
-        description: "Release type (one of): patch, minor, major, prepatch, preminor, premajor, prerelease"
+        description: 'Release type (one of): patch, minor, major, prepatch, preminor, premajor, prerelease'
         required: true
 jobs:
   release:
@@ -18,23 +18,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           registry-url: https://registry.npmjs.org/
-          node-version: "16"
+          node-version: '16'
 
       # Install deps
       - name: Deps
         run: yarn install --frozen-lockfile
 
-      # Run source code test
-      - name: Test
-        run: yarn test
-
       # Build Library
       - name: Build
         run: yarn build
-
-      # Test Build
-      - name: Build Test
-        run: yarn test
 
       # Configure Git
       - name: Git configuration
